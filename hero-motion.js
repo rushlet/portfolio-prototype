@@ -1,7 +1,7 @@
 const hero = document.querySelector(".hero");
 const motionToggle = document.querySelector("[data-hero-motion-toggle]");
 
-if (hero && motionToggle) {
+if (motionToggle) {
   const motionLabel = motionToggle.querySelector("[data-hero-motion-label]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const preferenceKey = "rushlet-hero-motion";
@@ -23,7 +23,8 @@ if (hero && motionToggle) {
   };
 
   const setMotion = (enabled) => {
-    hero.classList.toggle("hero-motion-on", enabled);
+    if (hero) hero.classList.toggle("hero-motion-on", enabled);
+    document.body.classList.toggle("motion-enabled", enabled);
     motionToggle.setAttribute("aria-pressed", String(enabled));
     motionLabel.textContent = enabled ? "Motion on" : "Motion off";
   };
