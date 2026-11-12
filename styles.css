@@ -805,3 +805,5 @@ body { overflow-x: hidden; }
   .site-header nav a { padding-inline: .55rem; font-size: .72rem; }
 }
 .site-header nav a, .motion-toggle { border: 2px solid var(--blue); }
+.tile-illustration.code-illustration,
+.tile-illustration.writing-illustration { padding: 0; background: var(--white); }
