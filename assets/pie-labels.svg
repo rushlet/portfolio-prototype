@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <rect width="720" height="400" fill="#dfe6ff"/>
+  <rect x="22" y="22" width="676" height="356" rx="18" fill="#fffefa"/>
+  <g stroke="#fffefa" stroke-width="2">
+    <path d="M360 200 L400.57 112.99 A96 96 0 0 1 366.36 295.79 Z" fill="#4156db"/>
+    <path d="M360 200 L366.36 295.79 A96 96 0 0 1 264.80 212.36 Z" fill="#e85a93"/>
+    <path d="M360 200 L264.80 212.36 A96 96 0 0 1 298.55 126.24 Z" fill="#f4db65"/>
+    <path d="M360 200 L298.55 126.24 A96 96 0 0 1 341.68 105.76 Z" fill="#7386e7"/>
+    <path d="M360 200 L341.68 105.76 A96 96 0 0 1 371.70 104.72 Z" fill="#af4979"/>
+    <path d="M360 200 L371.70 104.72 A96 96 0 0 1 389.35 108.60 Z" fill="#6ca6a8"/>
+    <path d="M360 200 L389.35 108.60 A96 96 0 0 1 400.57 112.99 Z" fill="#b7823b"/>
+  </g>
+  <circle cx="360" cy="200" r="53" fill="#fffefa"/>
+  <style>g.labels path { fill: none; stroke: #1e315a; stroke-width: 1.3; } text { fill: #1e315a; font: 650 17px system-ui, sans-serif; }</style>
+  <g class="labels">
+    <path d="M356.6 104.1 L226 104 H204" />
+    <text x="192" y="109" text-anchor="end"><tspan x="192" dy="0">Public art</tspan></text>
+    <path d="M318.8 113.3 L226 153 H204" />
+    <text x="192" y="158" text-anchor="end"><tspan x="192" dy="0">Cycle maintenance</tspan></text>
+    <path d="M270.6 165.0 L226 202 H204" />
+    <text x="192" y="198" text-anchor="end"><tspan x="192" dy="0">Community</tspan><tspan x="192" dy="19">centres</tspan></text>
+    <path d="M299.1 274.2 L226 274 H204" />
+    <text x="192" y="279" text-anchor="end"><tspan x="192" dy="0">Libraries</tspan></text>
+    <path d="M380.6 106.2 L494 106 H516" />
+    <text x="528" y="102" text-anchor="start"><tspan x="528" dy="0">Neighbourhood</tspan><tspan x="528" dy="19">gardens</tspan></text>
+    <path d="M395.0 110.6 L494 155 H516" />
+    <text x="528" y="160" text-anchor="start"><tspan x="528" dy="0">Small grants</tspan></text>
+    <path d="M454.4 217.7 L494 218 H516" />
+    <text x="528" y="214" text-anchor="start"><tspan x="528" dy="0">Parks and</tspan><tspan x="528" dy="19">open spaces</tspan></text>
+  </g>
+</svg>

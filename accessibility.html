@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <meta
+      name="description"
+      content="At Flourish I led accessibility work across the chart template library. I organised findings from an external audit, documented core user journeys and helped turn the findings into fixes across the library."
+    />
+    <title>Engineering accessible data visualisations — Becky Rush</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
+        >RUSHLET</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a><a href="resume.html">About</a
+        ><a href="index.html#contact">Contact</a
+        ><span class="nav-motion-group" hidden
+          ><span class="nav-separator" aria-hidden="true"></span
+          ><button
+            class="motion-toggle"
+            type="button"
+            data-hero-motion-toggle
+            aria-label="Motion"
+            aria-pressed="false"
+          >
+            <span class="motion-indicator" aria-hidden="true"></span
+            ><span data-hero-motion-label>Motion off</span>
+          </button></span
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="case-page editorial-case">
+      <section class="case-hero section-wrap">
+        <a class="back-link" href="work.html">← Back to Work</a>
+        <p class="eyebrow">FLOURISH · ACCESSIBILITY</p>
+        <h1>Engineering accessible data visualisations</h1>
+        <p class="case-deck">At Flourish I led accessibility work across the chart template library. I organised findings from an external audit, documented core user journeys and helped turn the findings into fixes across the library.</p>
+        <div class="case-facts">
+          <div><b>My role</b><span>Template remediation lead</span></div>
+          <div><b>Timeframe</b><span>2024–2025</span></div>
+          <div><b>Standard guiding the work</b><span>WCAG 2.1 AA</span></div>
+        </div>
+      </section>
+      <div class="case-body section-wrap">
+        <section class="case-prose">
+          <h2>From audit to release</h2>
+          <p>I owned the template remediation work and coordinated the response to the external audit across three codebases. I organised and triaged the findings, documented core user flows and prepared questions for a workshop with the auditor. That gave the teams a way to work through barriers in the order people encountered them and turn the findings into fixes.</p>
+          <p>WCAG 2.1 AA guided the improvements ahead of the European Accessibility Act in 2025. My direct engineering responsibility was the visualisation template library.</p>
+        </section>
+        <section class="case-prose case-highlight">
+          <h2>Keyboard access to chart popups</h2>
+          <p>In hierarchy charts, a popup can contain the details a reader needs about a category. If those details depend on hovering, a reader using a keyboard can miss them. I made the popups reachable by keyboard and used visible focus to show which item the reader was on.</p>
+          <p>I also worked on the card carousel’s roles and keyboard interaction so people could identify the control and move through its cards.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Screen-reader access to charts and tables</h2>
+          <p>I improved chart data tables so readers could reach individual values and hear which column was sorted and in which direction. In animated charts, live-region captions made changes available as the view updated.</p>
+          <p>I also worked on formatting numbers in screen-reader labels so values were easier to understand when spoken.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Tap alternatives to dragging</h2>
+          <p>A drag requires someone to hold contact while moving across the screen. I added tap alternatives so touch users could complete the same action with a simpler gesture.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Speaking and related work</h2>
+          <ul>
+            <li><a href="work.html#talk-accessible-storytelling">Adventures in accessible storytelling</a> · Women Driven Development, 2020</li>
+            <li><a href="work.html#talk-multilingual">How to make your data viz speak all languages</a> · Outlier, 2022</li>
+            <li><a href="case-study-warmer.html">How much warmer is your city?</a> · BBC News case study</li>
+            <li><a href="https://medium.com/@bbc_visual_and_data_journalism/how-much-warmer-is-your-city-behind-the-scenes-of-our-climate-change-interactive-7d97673b8121">Behind the scenes of the BBC climate interactive</a> · Article</li>
+          </ul>
+        </section>
+      </div>
+      <nav class="case-next section-wrap" aria-label="More work">
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="work.html#writing-speaking">Writing and speaking <span aria-hidden="true">↗</span></a>
+      </nav>
+    </main>
+    <footer class="site-footer section-wrap">
+      <a class="wordmark" href="index.html">RUSHLET</a
+      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
+      ><a href="index.html#contact">Get in touch ↗</a>
+    </footer>
+    <script src="hero-motion.js" defer></script>
+  </body>
+</html>

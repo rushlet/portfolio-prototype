@@ -14,34 +14,30 @@ if (motionToggle) {
     }
   };
 
-  const savePreference = (enabled) => {
-    try {
-      window.localStorage.setItem(preferenceKey, enabled ? "on" : "off");
-    } catch {
-      // The toggle still works for this page when storage is unavailable.
-    }
-  };
+  let wantsMotion = readPreference() !== "off";
 
-  const setMotion = (enabled) => {
+  const updateMotion = () => {
+    const enabled = wantsMotion && !reducedMotion.matches;
     if (hero) hero.classList.toggle("hero-motion-on", enabled);
+    document.documentElement.classList.toggle("site-motion-on", enabled);
     document.body.classList.toggle("motion-enabled", enabled);
     motionToggle.setAttribute("aria-pressed", String(enabled));
+    motionToggle.setAttribute("aria-disabled", String(reducedMotion.matches));
     motionLabel.textContent = enabled ? "Motion on" : "Motion off";
   };
 
-  const savedPreference = readPreference();
-  setMotion(savedPreference === null ? !reducedMotion.matches : savedPreference === "on");
-
   motionToggle.addEventListener("click", () => {
-    const enabled = motionToggle.getAttribute("aria-pressed") !== "true";
-    setMotion(enabled);
-    savePreference(enabled);
-  });
-
-  reducedMotion.addEventListener("change", (event) => {
-    if (event.matches) {
-      setMotion(false);
-      savePreference(false);
+    if (reducedMotion.matches) return;
+    wantsMotion = !wantsMotion;
+    updateMotion();
+    try {
+      window.localStorage.setItem(preferenceKey, wantsMotion ? "on" : "off");
+    } catch {
+      // The toggle still works for this page when storage is unavailable.
     }
   });
+
+  updateMotion();
+  motionToggle.closest(".nav-motion-group").hidden = false;
+  reducedMotion.addEventListener("change", updateMotion);
 }

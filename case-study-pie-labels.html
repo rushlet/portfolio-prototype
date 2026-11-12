@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <meta
+      name="description"
+      content="I led the design and engineering of external labels for Flourish pie and donut charts, helping chart makers keep categories readable when slices are small or space is limited."
+    />
+    <title>Making room for the data — Becky Rush</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
+        >RUSHLET</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a><a href="resume.html">About</a
+        ><a href="index.html#contact">Contact</a
+        ><span class="nav-motion-group" hidden
+          ><span class="nav-separator" aria-hidden="true"></span
+          ><button
+            class="motion-toggle"
+            type="button"
+            data-hero-motion-toggle
+            aria-label="Motion"
+            aria-pressed="false"
+          >
+            <span class="motion-indicator" aria-hidden="true"></span
+            ><span data-hero-motion-label>Motion off</span>
+          </button></span
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="case-page editorial-case">
+      <section class="case-hero section-wrap">
+        <a class="back-link" href="work.html">← Back to Work</a>
+        <p class="eyebrow">FLOURISH · CHART ENGINEERING</p>
+        <h1>Making room for the data</h1>
+        <p class="case-deck">I led the design and engineering of external labels for Flourish pie and donut charts, helping chart makers keep categories readable when slices are small or space is limited.</p>
+        <div class="case-facts">
+          <div><b>My role</b><span>Feature lead, working with product designers</span></div>
+          <div><b>Built with</b><span>D3 and SVG</span></div>
+          <div><b>Released</b><span>October 2026</span></div>
+        </div>
+      </section>
+      <div class="case-body section-wrap">
+        <section class="case-prose">
+          <h2>When the text outgrows the slice</h2>
+          <p>A label inside a slice can disappear as soon as the slice gets too small. Moving it outside makes room for the text and raises another question. How do you keep the label near its slice when several categories are competing for the same space?</p>
+        </section>
+        <section class="case-prose case-highlight chart-example" aria-labelledby="chart-example-title">
+          <h2 id="chart-example-title">External labels in a crowded chart</h2>
+          <figure class="case-figure">
+            <div class="chart-demo-slot">
+              <img src="assets/pie-labels.svg" width="720" height="400" alt="A donut with elbow leader lines from slices to two columns of labels. Several small slices share one side." decoding="async" loading="lazy" />
+            </div>
+            <figcaption>Illustration using fictional data. Long category names and several small slices show how labels and leader lines can use the space around a donut.</figcaption>
+          </figure>
+          <p>Seven categories share a fictional community budget. Parks and open spaces has the largest share at 42%. The three smallest slices together make up 10%, with their labels spaced apart near the top of the two columns.</p>
+          <table class="chart-data">
+            <caption>Fictional community budget used in the illustration</caption>
+            <thead><tr><th scope="col">Category</th><th scope="col">Share</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Parks and open spaces</th><td>42%</td></tr>
+              <tr><th scope="row">Libraries</th><td>24%</td></tr>
+              <tr><th scope="row">Community centres</th><td>16%</td></tr>
+              <tr><th scope="row">Cycle maintenance</th><td>8%</td></tr>
+              <tr><th scope="row">Public art</th><td>5%</td></tr>
+              <tr><th scope="row">Neighbourhood gardens</th><td>3%</td></tr>
+              <tr><th scope="row">Small grants</th><td>2%</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="case-prose">
+          <h2>How the layout works</h2>
+          <p>Labels form columns on either side of the chart. Elbow leader lines connect each label to its slice. The layout adjusts vertical spacing to reduce overlaps and can wrap or truncate long labels. When space runs out, it hides labels it cannot place while favouring placements close to their segments.</p>
+          <p>Segment count, text length, font size and available space all affect what fits. A legend can still give readers a way to identify categories whose labels are hidden.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Designing for more than one chart</h2>
+          <p>I worked with product designers through review and a substantial rework. We needed a default chart makers could override, with behaviour that held up when the chart resized, appeared in a grid or transitioned between label states.</p>
+          <p>Several small slices on the same side can fill one column even when the other has room. A zero-value category also needs consideration because it has no visible slice for a leader line to point to.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Shipping a new default</h2>
+          <p>We released external labels as the default for new charts in October 2026. A new major template version let existing charts keep their appearance. The team also updated starter examples to show the new default.</p>
+        </section>
+      </div>
+      <nav class="case-next section-wrap" aria-label="More work">
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="case-study-gem.html">Next: Global Energy Monitor dashboard <span aria-hidden="true">↗</span></a>
+      </nav>
+    </main>
+    <footer class="site-footer section-wrap">
+      <a class="wordmark" href="index.html">RUSHLET</a
+      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
+      ><a href="index.html#contact">Get in touch ↗</a>
+    </footer>
+    <script src="hero-motion.js" defer></script>
+  </body>
+</html>

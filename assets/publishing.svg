@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <rect width="720" height="400" fill="#ffd8e7"/>
+  <g fill="#fffefa" stroke="#4156db" stroke-width="3">
+    <rect x="58" y="64" width="294" height="250" rx="20"/>
+    <rect x="369" y="99" width="294" height="250" rx="20"/>
+  </g>
+  <g fill="#1e315a" font-family="system-ui, sans-serif">
+    <text x="85" y="113" font-size="21" font-weight="700">Community garden map</text>
+    <text x="396" y="148" font-size="21" font-weight="700">Community garden map</text>
+    <text x="85" y="157" font-size="17">Draft</text>
+    <text x="396" y="192" font-size="17">Published</text>
+  </g>
+  <path d="M85 183h240M85 201h150M396 218h240M396 236h150" stroke="#4156db" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+  <rect x="85" y="242" width="170" height="43" rx="20" fill="#f4db65"/>
+  <rect x="396" y="277" width="140" height="43" rx="20" fill="#dfe6ff"/>
+  <g fill="#1e315a" font-family="system-ui, sans-serif" font-size="17" font-weight="700">
+    <text x="105" y="269">Request review</text>
+    <text x="416" y="304">Republish</text>
+  </g>
+</svg>

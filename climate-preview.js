@@ -8,13 +8,13 @@ if (preview) {
 
   const views = {
     globe: {
-      src: "assets/climate-change-globe.png",
+      src: "assets/climate-change-globe.webp",
       alt: "The global temperature-change globe from How much warmer is your city?",
       label: "GLOBAL VIEW",
       caption: "Global view: a 3D globe mapped with temperature-change data.",
     },
     city: {
-      src: "assets/climate-change-chart.png",
+      src: "assets/climate-change-chart.webp",
       alt: "A city temperature chart from How much warmer is your city?, shown on a laptop screen.",
       label: "CITY LOOKUP",
       caption: "City view: monthly temperatures and projections for a selected place.",
