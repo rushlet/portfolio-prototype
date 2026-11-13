@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <meta
+      name="description"
+      content="I worked with another engineer to rebuild Flourish’s publish and export interface, covering the different states a visualisation can be in and the actions available to the person publishing it."
+    />
+    <title>Redesigning publishing and export — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
+        >RUSHLET</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a><a href="resume.html">About</a
+        ><a href="index.html#contact">Contact</a
+        ><span class="nav-motion-group" hidden
+          ><span class="nav-separator" aria-hidden="true"></span
+          ><button
+            class="motion-toggle"
+            type="button"
+            data-hero-motion-toggle
+            aria-label="Motion"
+            aria-pressed="false"
+          >
+            <span class="motion-indicator" aria-hidden="true"></span
+            ><span data-hero-motion-label>Motion off</span>
+          </button></span
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="case-page editorial-case">
+      <section class="case-hero section-wrap">
+        <a class="back-link" href="work.html">← Back to Work</a>
+        <p class="eyebrow">FLOURISH · PRODUCT ENGINEERING</p>
+        <h1>Redesigning publishing and export</h1>
+        <p class="case-deck">I worked with another engineer to rebuild Flourish’s publish and export interface, covering the different states a visualisation can be in and the actions available to the person publishing it.</p>
+        <div class="case-facts">
+          <div><b>My role</b><span>Co-developer</span></div>
+          <div><b>Focus</b><span>Component-based UI, tests and rollout</span></div>
+          <div><b>Released</b><span>February 2026</span></div>
+        </div>
+      </section>
+      <div class="case-body section-wrap">
+        <section class="case-prose">
+          <h2>Make the next action clear</h2>
+          <p>Publishing a chart for the first time, sending it for approval and updating a published chart each call for different actions. The interface also needed to show which exports were available or locked and which embed settings a person could use.</p>
+        </section>
+        <section class="case-prose case-highlight">
+          <h2>One chart, different choices</h2>
+          <div class="publishing-states">
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-unpublished.webp" width="858" height="862" alt="The panel offers Publish to share and embed, alongside presentation and export options." decoding="async" loading="lazy" />
+              <figcaption><strong>Before publishing.</strong> Publish to make the chart available for sharing and embedding.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-published.webp" width="846" height="1126" alt="The panel shows a green Published status, with controls to view or unpublish the public project and copy its embed code." decoding="async" loading="lazy" />
+              <figcaption><strong>Published.</strong> View the public chart, copy its embed code or unpublish it.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-republish.webp" width="852" height="1118" alt="The panel shows an amber Unpublished changes status beside the republish button." decoding="async" loading="lazy" />
+              <figcaption><strong>Unpublished changes.</strong> Republish to update the public chart.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="case-prose">
+          <h2>Building and testing it together</h2>
+          <p>I co-built the component-based interface with another engineer. My work included UI components styled with CSS Modules, automated tests and rollout. We used the different publishing and export states to guide what the interface needed to show and what the tests needed to cover.</p>
+        </section>
+        <section class="case-prose">
+          <h2>From feature flag to full release</h2>
+          <p>We shipped the new dialog behind a feature flag in February 2026 with automated coverage. After launch we fixed issues with republishing and copying links, then removed the legacy dialog in March 2026.</p>
+        </section>
+      </div>
+      <nav class="case-next section-wrap" aria-label="More work">
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="accessibility.html">Engineering accessible data visualisations <span aria-hidden="true">↗</span></a>
+      </nav>
+    </main>
+    <footer class="site-footer section-wrap">
+      <a class="wordmark" href="index.html">RUSHLET</a
+      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
+      ><a href="index.html#contact">Get in touch ↗</a>
+    </footer>
+    <script src="hero-motion.js" defer></script>
+  </body>
+</html>

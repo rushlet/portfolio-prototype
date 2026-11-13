@@ -1,7 +1,142 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#f7f6f0"/><meta name="description" content="A dashboard for Global Energy Monitor built with the Flourish API."/><title>Global Energy Monitor dashboard — Becky Rush</title><link rel="stylesheet" href="styles.css"/></head>
-<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="index.html" aria-label="Becky Rush, home">RUSHLET</a><nav aria-label="Main navigation"><a href="work.html">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a><span class="nav-motion-group"><span class="nav-separator" aria-hidden="true"></span><button class="motion-toggle" type="button" data-hero-motion-toggle aria-pressed="false"><span class="motion-indicator" aria-hidden="true"></span><span data-hero-motion-label>Motion off</span></button></span></nav></header>
-<main id="main" class="case-page"><section class="case-hero section-wrap"><a class="back-link" href="index.html#work">← Back to selected work</a><p class="eyebrow"><span class="eyebrow-icon pink-icon">02</span> FREELANCE · ENERGY DATA</p><h1>Global Energy<br/><em>Monitor dashboard</em></h1><p class="case-deck">A dashboard that helps people explore energy infrastructure data through a set of connected Flourish visualisations.</p><div class="case-facts"><div><b>My role</b><span>Freelance developer</span></div><div><b>Focus</b><span>Flourish API · data · interaction</span></div><div><b>Client</b><span>Global Energy Monitor</span></div></div></section>
-<div class="gem-live-cover"><iframe src="https://gcpt-dashboard-a8e65654bbea.herokuapp.com/" title="Interactive Global Coal Plant Tracker dashboard" loading="lazy"></iframe><p>Live preview of the Global Coal Plant Tracker dashboard · <a href="https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2629" target="_blank" rel="noreferrer">open the GEM page ↗</a></p></div>
-<div class="case-body section-wrap"><section class="case-prose"><p class="eyebrow">THE CHALLENGE</p><h2>Help people see the whole picture.</h2><p>Global Energy Monitor tracks energy infrastructure around the world. The dashboard brought several Flourish visualisations together so that visitors could explore the data through shared filters, instead of treating each chart as a separate destination.</p></section><section class="case-prose case-highlight"><p class="eyebrow">MY CONTRIBUTION</p><h2>Connect the controls to every view.</h2><p>I built a dashboard using the Flourish API, coordinating the selected filters and passing the relevant data into the visualisations. A key part of the work was making sure sorting and filtering behaved consistently across views, even when the underlying datasets had different shapes.</p><ul><li>Connected dashboard-level filters to multiple embedded visualisations.</li><li>Worked through data sorting and mapping edge cases.</li><li>Built a shared experience around a set of separately authored charts.</li></ul></section><section class="case-prose"><p class="eyebrow">WHAT MADE IT INTERESTING</p><h2>One interface, several data stories.</h2><p>The Flourish API made it possible to combine chart experiences, but the dashboard still needed to make the relationship between controls and charts feel predictable. The project was a useful exercise in thinking beyond the individual visualisation: the product experience lives in how the views work together.</p></section><section class="case-prose"><p class="eyebrow">WHAT I LEARNED</p><h2>Data tools need clear shared controls.</h2><p>Coordinating filters across charts made the relationship between data and interface especially visible. It reinforced the value of thinking about the whole journey through the dashboard, and of treating sorting and filtering as part of the story people are trying to understand.</p><div class="case-links"><a class="button-link" href="https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2629" target="_blank" rel="noreferrer">Open the GEM dashboard <span aria-hidden="true">↗</span></a><a class="text-link" href="case-study-warmer.html">Previous case study ↗</a></div></section></div>
-<nav class="case-next section-wrap" aria-label="More case studies"><span>MORE WORK</span><a href="case-study-warmer.html">Previous: How much warmer is your city? <b>↗</b></a></nav></main><footer class="site-footer section-wrap"><a class="wordmark" href="index.html">RUSHLET</a><span>MADE WITH CURIOSITY IN BRIGHTON</span><a href="index.html#contact">Get in touch ↗</a></footer><script src="hero-motion.js" defer></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <meta
+      name="description"
+      content="A dashboard for Global Energy Monitor built with the Flourish API."
+    />
+    <title>Global Energy Monitor dashboard — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
+        >RUSHLET</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a><a href="resume.html">About</a
+        ><a href="index.html#contact">Contact</a
+        ><span class="nav-motion-group" hidden
+          ><span class="nav-separator" aria-hidden="true"></span
+          ><button
+            class="motion-toggle"
+            type="button"
+            data-hero-motion-toggle
+            aria-label="Motion"
+            aria-pressed="false"
+          >
+            <span class="motion-indicator" aria-hidden="true"></span
+            ><span data-hero-motion-label>Motion off</span>
+          </button></span
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="case-page editorial-case">
+      <section class="case-hero section-wrap">
+        <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
+        <p class="eyebrow">
+          <span class="eyebrow-icon pink-icon">02</span> FREELANCE · ENERGY DATA
+        </p>
+        <h1>Global Energy<br /><em>Monitor dashboard</em></h1>
+        <p class="case-deck">
+          The Global Coal Plant Tracker dashboard helps readers explore
+          power-plant data across connected charts. One filter selection can
+          carry across the views they want to compare.
+        </p>
+        <div class="case-facts">
+          <div><b>My role</b><span>Freelance developer</span></div>
+          <div><b>Focus</b><span>Flourish API · data · interaction</span></div>
+          <div><b>Client</b><span>Global Energy Monitor</span></div>
+        </div>
+      </section>
+      <figure class="section-wrap case-figure gem-evidence">
+        <img src="assets/gem-dashboard-preview.png" width="1090" height="511" alt="The Global Coal Plant Tracker dashboard showing a shared control area and several charts." loading="lazy" decoding="async" />
+        <figcaption>Dashboard screenshot from the Global Coal Plant Tracker. Tracker and data by Global Energy Monitor.</figcaption>
+      </figure>
+      <div class="case-body section-wrap">
+        <section class="case-prose">
+          <p class="eyebrow">THE CHALLENGE</p>
+          <h2>Help people see the whole picture.</h2>
+          <p>
+            Global Energy Monitor researches and publishes the tracker data.
+            For the dashboard, readers needed to apply a filter once and
+            compare results across several Flourish visualisations.
+          </p>
+        </section>
+        <section class="case-prose case-highlight">
+          <p class="eyebrow">MY CONTRIBUTION</p>
+          <h2>Connect the controls to every view.</h2>
+          <p>
+            I integrated the charts using the Flourish API. A reader changes
+            a shared dashboard filter, the dashboard applies the selection
+            through the API, and the connected charts show the filtered data.
+            I worked through sorting and data-mapping edge cases so the views
+            behaved consistently.
+          </p>
+          <ul>
+            <li>
+              Connected dashboard-level filters to multiple embedded
+              visualisations.
+            </li>
+            <li>Worked through data sorting and mapping edge cases.</li>
+            <li>
+              Built a shared experience around a set of separately authored
+              charts.
+            </li>
+          </ul>
+        </section>
+        <section class="case-prose">
+          <p class="eyebrow">WHAT MADE IT INTERESTING</p>
+          <h2>One interface, several data stories.</h2>
+          <p>
+            The Flourish API made it possible to combine chart experiences, but
+            the dashboard still needed to make the relationship between controls
+            and charts feel predictable. The project was a useful exercise in
+            thinking beyond the individual visualisation: the product experience
+            lives in how the views work together.
+          </p>
+        </section>
+        <section class="case-prose">
+          <p class="eyebrow">WHAT I LEARNED</p>
+          <h2>Data tools need clear shared controls.</h2>
+          <p>
+            Coordinating filters across charts made the relationship between
+            data and interface especially visible. It reinforced the value of
+            thinking about the whole journey through the dashboard, and of
+            treating sorting and filtering as part of the story people are
+            trying to understand.
+          </p>
+          <div class="case-links">
+            <a
+              class="button-link"
+              href="https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2629"
+              target="_blank"
+              rel="noreferrer"
+              >Open the live GEM dashboard <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="work.html#case-studies"
+              >See all case studies</a
+            >
+          </div>
+        </section>
+      </div>
+      <nav class="case-next section-wrap" aria-label="More case studies">
+        <span>MORE WORK</span
+        ><a href="case-study-publishing.html"
+          >Next: Redesigning publishing and export <b>↗</b></a
+        >
+      </nav>
+    </main>
+    <footer class="site-footer section-wrap">
+      <a class="wordmark" href="index.html">RUSHLET</a
+      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
+      ><a href="index.html#contact">Get in touch ↗</a>
+    </footer>
+    <script src="hero-motion.js" defer></script>
+  </body>
+</html>
