@@ -6,9 +6,11 @@
     <meta name="theme-color" content="#f7f6f0" />
     <meta
       name="description"
-      content="I led the design and engineering of external labels for Flourish pie and donut charts, helping chart makers keep categories readable when slices are small or space is limited."
+      content="I led the design and engineering of external labels for Flourish pie and donut charts, giving chart makers a way to label slices that were too small to hold text."
     />
     <title>Making room for the data — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -40,7 +42,7 @@
         <a class="back-link" href="work.html">← Back to Work</a>
         <p class="eyebrow">FLOURISH · CHART ENGINEERING</p>
         <h1>Making room for the data</h1>
-        <p class="case-deck">I led the design and engineering of external labels for Flourish pie and donut charts, helping chart makers keep categories readable when slices are small or space is limited.</p>
+        <p class="case-deck">I led the design and engineering of external labels for Flourish pie and donut charts, giving chart makers a way to label slices that were too small to hold text.</p>
         <div class="case-facts">
           <div><b>My role</b><span>Feature lead, working with product designers</span></div>
           <div><b>Built with</b><span>D3 and SVG</span></div>
@@ -49,31 +51,72 @@
       </section>
       <div class="case-body section-wrap">
         <section class="case-prose">
-          <h2>When the text outgrows the slice</h2>
-          <p>A label inside a slice can disappear as soon as the slice gets too small. Moving it outside makes room for the text and raises another question. How do you keep the label near its slice when several categories are competing for the same space?</p>
+          <h2>Labels had to fit inside the slice</h2>
+          <p>Before this release, labels inside the slices were the only placement option in Flourish pie and donut charts. When a slice was too small to hold its label, readers had to look elsewhere for the category name. External labels gave those names room outside the pie, with leader lines showing which slice each label belonged to.</p>
         </section>
-        <section class="case-prose case-highlight chart-example" aria-labelledby="chart-example-title">
-          <h2 id="chart-example-title">External labels in a crowded chart</h2>
-          <figure class="case-figure">
-            <div class="chart-demo-slot">
-              <img src="assets/pie-labels.svg" width="720" height="400" alt="A donut with elbow leader lines from slices to two columns of labels. Several small slices share one side." decoding="async" loading="lazy" />
+        <section class="case-prose case-highlight chart-examples" aria-labelledby="chart-examples-title">
+          <h2 id="chart-examples-title">Before and after</h2>
+          <p>Switch between the original layout and the new default using the same UK electricity data. Look for small slices that gain a label, especially in the grid and at mobile widths.</p>
+          <section class="chart-example" aria-labelledby="chart-single-title">
+            <h3 id="chart-single-title">Single chart</h3>
+            <fieldset class="chart-label-options" hidden>
+              <legend>Label placement for the single chart</legend>
+              <label>
+                <input type="radio" name="single-labels" value="visualisation/30909694?1823954" />
+                <span>Before · Internal labels</span>
+              </label>
+              <label>
+                <input type="radio" name="single-labels" value="visualisation/30906647?1823954" checked />
+                <span>After · External labels</span>
+              </label>
+            </fieldset>
+            <div class="chart-comparison">
+              <div class="chart-preview">
+                <p class="chart-preview-label">Desktop</p>
+                <div class="flourish-embed flourish-chart" data-src="visualisation/30906647?1823954">
+                  <noscript><img src="https://public.flourish.studio/visualisation/30906647/thumbnail" alt="UK electricity generation by source in 2024" loading="lazy" /></noscript>
+                </div>
+              </div>
+              <div class="chart-preview chart-preview-mobile">
+                <p class="chart-preview-label">Mobile</p>
+                <div data-mobile-chart></div>
+              </div>
             </div>
-            <figcaption>Illustration using fictional data. Long category names and several small slices show how labels and leader lines can use the space around a donut.</figcaption>
-          </figure>
-          <p>Seven categories share a fictional community budget. Parks and open spaces has the largest share at 42%. The three smallest slices together make up 10%, with their labels spaced apart near the top of the two columns.</p>
-          <table class="chart-data">
-            <caption>Fictional community budget used in the illustration</caption>
-            <thead><tr><th scope="col">Category</th><th scope="col">Share</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Parks and open spaces</th><td>42%</td></tr>
-              <tr><th scope="row">Libraries</th><td>24%</td></tr>
-              <tr><th scope="row">Community centres</th><td>16%</td></tr>
-              <tr><th scope="row">Cycle maintenance</th><td>8%</td></tr>
-              <tr><th scope="row">Public art</th><td>5%</td></tr>
-              <tr><th scope="row">Neighbourhood gardens</th><td>3%</td></tr>
-              <tr><th scope="row">Small grants</th><td>2%</td></tr>
-            </tbody>
-          </table>
+            <div class="chart-example-links" role="group" aria-label="Open single chart in Flourish">
+              <a class="text-link" href="https://public.flourish.studio/visualisation/30909694/" aria-label="Open the single chart with internal labels in Flourish">Internal labels in Flourish ↗</a>
+              <a class="text-link" href="https://public.flourish.studio/visualisation/30906647/" aria-label="Open the single chart with external labels in Flourish">External labels in Flourish ↗</a>
+            </div>
+          </section>
+          <section class="chart-example" aria-labelledby="chart-grid-title">
+            <h3 id="chart-grid-title">Grid of charts</h3>
+            <fieldset class="chart-label-options" hidden>
+              <legend>Label placement for the grid of charts</legend>
+              <label>
+                <input type="radio" name="grid-labels" value="visualisation/30909711?1823954" />
+                <span>Before · Internal labels</span>
+              </label>
+              <label>
+                <input type="radio" name="grid-labels" value="visualisation/30906686?1823954" checked />
+                <span>After · External labels</span>
+              </label>
+            </fieldset>
+            <div class="chart-comparison">
+              <div class="chart-preview">
+                <p class="chart-preview-label">Desktop</p>
+                <div class="flourish-embed flourish-chart" data-src="visualisation/30906686?1823954">
+                  <noscript><img src="https://public.flourish.studio/visualisation/30906686/thumbnail" alt="UK electricity generation by source across four years" loading="lazy" /></noscript>
+                </div>
+              </div>
+              <div class="chart-preview chart-preview-mobile">
+                <p class="chart-preview-label">Mobile</p>
+                <div data-mobile-chart></div>
+              </div>
+            </div>
+            <div class="chart-example-links" role="group" aria-label="Open grid of charts in Flourish">
+              <a class="text-link" href="https://public.flourish.studio/visualisation/30909711/" aria-label="Open the grid of charts with internal labels in Flourish">Internal labels in Flourish ↗</a>
+              <a class="text-link" href="https://public.flourish.studio/visualisation/30906686/" aria-label="Open the grid of charts with external labels in Flourish">External labels in Flourish ↗</a>
+            </div>
+          </section>
         </section>
         <section class="case-prose">
           <h2>How the layout works</h2>
@@ -87,7 +130,7 @@
         </section>
         <section class="case-prose">
           <h2>Shipping a new default</h2>
-          <p>We released external labels as the default for new charts in October 2026. A new major template version let existing charts keep their appearance. The team also updated starter examples to show the new default.</p>
+          <p>In October 2026, we made external labels the default for new charts and kept internal labels available as an option. A new major template version let existing charts keep their appearance. The team also updated starter examples to show the new default.</p>
         </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More work">
@@ -100,6 +143,9 @@
       ><span>MADE WITH CURIOSITY IN BRIGHTON</span
       ><a href="index.html#contact">Get in touch ↗</a>
     </footer>
+    <script>window.Flourish = { disable_autoload: true };</script>
+    <script src="https://public.flourish.studio/resources/embed.js" defer></script>
+    <script src="pie-chart-previews.js" defer></script>
     <script src="hero-motion.js" defer></script>
   </body>
 </html>

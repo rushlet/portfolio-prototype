@@ -9,6 +9,8 @@
       content="I worked with another engineer to rebuild Flourish’s publish and export interface, covering the different states a visualisation can be in and the actions available to the person publishing it."
     />
     <title>Redesigning publishing and export — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -54,10 +56,20 @@
         </section>
         <section class="case-prose case-highlight">
           <h2>One chart, different choices</h2>
-          <figure class="case-figure">
-            <img src="assets/publishing.svg" width="720" height="400" alt="Two states for a fictional community garden map. A draft offers Request review, while the published chart offers Republish." decoding="async" loading="lazy" />
-            <figcaption>Illustrative states for a fictional chart. An unpublished draft can need review. A published chart can be republished.</figcaption>
-          </figure>
+          <div class="publishing-states">
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-unpublished.webp" width="858" height="862" alt="The panel offers Publish to share and embed, alongside presentation and export options." decoding="async" loading="lazy" />
+              <figcaption><strong>Before publishing.</strong> Publish to make the chart available for sharing and embedding.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-published.webp" width="846" height="1126" alt="The panel shows a green Published status, with controls to view or unpublish the public project and copy its embed code." decoding="async" loading="lazy" />
+              <figcaption><strong>Published.</strong> View the public chart, copy its embed code or unpublish it.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="assets/flourish-publish-republish.webp" width="852" height="1118" alt="The panel shows an amber Unpublished changes status beside the republish button." decoding="async" loading="lazy" />
+              <figcaption><strong>Unpublished changes.</strong> Republish to update the public chart.</figcaption>
+            </figure>
+          </div>
         </section>
         <section class="case-prose">
           <h2>Building and testing it together</h2>
