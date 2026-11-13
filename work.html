@@ -9,6 +9,8 @@
       content="Selected case studies, published work, experiments, writing and talks by Becky Rush."
     />
     <title>Work &amp; experiments — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -61,7 +63,9 @@
         <h2>Selected case studies</h2>
         <div class="featured-grid">
           <article class="featured-card">
-            <img class="featured-art" src="assets/climate-change-globe.webp" srcset="assets/climate-change-globe-600.webp 600w, assets/climate-change-globe.webp 1110w" sizes="(min-width: 1240px) 580px, (min-width: 700px) 46vw, 92vw" width="1110" height="598" alt="" loading="lazy" decoding="async" />
+            <a class="featured-art-link" href="case-study-warmer.html" aria-label="Read the case study about How much warmer is your city?">
+              <img class="featured-art" src="assets/how-much-warmer-card.webp" srcset="assets/how-much-warmer-card-600.webp 600w, assets/how-much-warmer-card.webp 1160w" sizes="(min-width: 1240px) 580px, (min-width: 700px) 46vw, 92vw" width="1160" height="645" alt="" loading="lazy" decoding="async" />
+            </a>
             <div class="featured-copy">
               <p class="featured-organisation">BBC News</p>
               <h3>How much warmer is your city?</h3>
@@ -72,7 +76,9 @@
             </div>
           </article>
           <article class="featured-card">
-            <img class="featured-art" src="assets/pie-labels.svg" width="720" height="400" alt="" loading="lazy" decoding="async" />
+            <a class="featured-art-link" href="case-study-pie-labels.html" aria-label="Read the case study about Making room for the data">
+              <img class="featured-art" src="assets/flourish-pie-electricity.webp" width="1020" height="559" alt="" loading="lazy" decoding="async" />
+            </a>
             <div class="featured-copy">
               <p class="featured-organisation">Flourish</p>
               <h3>Making room for the data</h3>
@@ -83,7 +89,9 @@
             </div>
           </article>
           <article class="featured-card">
-            <img class="featured-art featured-dashboard" src="assets/gem-dashboard-preview.png" width="1090" height="511" alt="" loading="lazy" decoding="async" />
+            <a class="featured-art-link" href="case-study-gem.html" aria-label="Read the case study about Global Energy Monitor dashboard">
+              <img class="featured-art featured-dashboard" src="assets/gem-dashboard-preview.png" width="1090" height="511" alt="" loading="lazy" decoding="async" />
+            </a>
             <div class="featured-copy">
               <p class="featured-organisation">Global Energy Monitor</p>
               <h3>Global Energy Monitor dashboard</h3>
@@ -94,7 +102,9 @@
             </div>
           </article>
           <article class="featured-card">
-            <img class="featured-art" src="assets/publishing.svg" width="720" height="400" alt="" loading="lazy" decoding="async" />
+            <a class="featured-art-link" href="case-study-publishing.html" aria-label="Read the case study about Redesigning publishing and export">
+              <img class="featured-art featured-publishing" src="assets/flourish-publish-published.webp" width="846" height="1126" alt="" loading="lazy" decoding="async" />
+            </a>
             <div class="featured-copy">
               <p class="featured-organisation">Flourish</p>
               <h3>Redesigning publishing and export</h3>
@@ -131,6 +141,23 @@
           <div class="story-grid">
             <a
               class="story-card"
+              href="https://public.flourish.studio/visualisation/30910589/"
+              target="_blank"
+              rel="noreferrer"
+              ><img
+                class="story-chart-thumbnail" src="assets/flourish-festival-capacity.webp" width="1592" height="908" loading="lazy" decoding="async"
+                alt="Festival capacity chart with a last-updated timestamp and CSV download link in its footer"
+              /><span>FLOURISH · PRODUCT ENGINEERING</span>
+              <h3>Data downloads and update timestamps</h3>
+              <p>
+                A chart comparing six UK music festivals shows when the data was
+                last updated and lets readers download the figures and their
+                sources as a CSV.
+              </p>
+              <b>Open the interactive chart ↗</b></a
+            >
+            <a
+              class="story-card"
               href="https://www.bbc.co.uk/news/resources/idt-84994842-8967-4dfd-9490-10f805de9f68"
               target="_blank"
               rel="noreferrer"
@@ -152,7 +179,7 @@
               target="_blank"
               rel="noreferrer"
               ><img
-                src="assets/freedom-trashcan.webp" width="1110" height="598" loading="lazy" decoding="async"
+                class="story-screenshot" src="assets/trashcan-bbc.png" width="400" height="400" loading="lazy" decoding="async"
                 alt="Freedom trash can interactive from BBC News"
               /><span>BBC NEWS · INTERACTIVE</span>
               <h3>Freedom trash can</h3>
@@ -169,8 +196,8 @@
               target="_blank"
               rel="noreferrer"
               ><img
-                src="assets/gender-pay-gap.webp" width="1110" height="598" loading="lazy" decoding="async"
-                alt="Visual from Falling through the pay gap"
+                class="story-screenshot" src="assets/gender-pay-gap.webp" width="1200" height="652" loading="lazy" decoding="async"
+                alt="Dot plot sorted by gender pay gap. At 1,424 companies women were paid more, and at 8,124 companies men were paid more."
               /><span>BBC NEWS · DATA STORYTELLING</span>
               <h3>Falling through the pay gap</h3>
               <p>
@@ -203,7 +230,7 @@
               target="_blank"
               rel="noreferrer"
               ><img
-                src="assets/polltracker.webp" width="1110" height="598" loading="lazy" decoding="async"
+                src="assets/polltracker-bbc.png" width="400" height="400" loading="lazy" decoding="async"
                 alt="Polling charts from the BBC News poll tracker"
               /><span>BBC NEWS · ELECTIONS</span>
               <h3>Poll tracker 2019/2020</h3>
@@ -220,7 +247,7 @@
               target="_blank"
               rel="noreferrer"
               ><img
-                src="assets/climate-calculator.webp" width="1110" height="598" loading="lazy" decoding="async"
+                class="story-screenshot" src="assets/greendiet-bbc.png" width="400" height="400" loading="lazy" decoding="async"
                 alt="Climate change calculator interface"
               /><span>BBC NEWS · CLIMATE</span>
               <h3>Climate change calculator</h3>
@@ -236,9 +263,10 @@
               href="https://www.bbc.co.uk/news/health-41483322"
               target="_blank"
               rel="noreferrer"
-              ><span class="story-graphic nhs-graphic" aria-hidden="true"
-                >NHS<span>LOCAL TRUSTS</span></span
-              ><span>BBC NEWS · HEALTH DATA</span>
+              ><img
+                class="story-screenshot" src="assets/nhstracker-bbc.png" width="400" height="400" loading="lazy" decoding="async"
+                alt="BBC News NHS Tracker interface"
+              /><span>BBC NEWS · HEALTH DATA</span>
               <h3>NHS Tracker</h3>
               <p>
                 Led development on an update to the local health services
@@ -252,9 +280,10 @@
               href="https://www.bbc.co.uk/news/world-us-canada-39732845"
               target="_blank"
               rel="noreferrer"
-              ><span class="story-graphic quote-graphic" aria-hidden="true"
-                >“<i>COUNTRY<br />BY COUNTRY</i></span
-              ><span>BBC NEWS · INTERACTIVE</span>
+              ><img
+                class="story-screenshot" src="assets/bbc-trump-talk-bbc.png" width="400" height="400" loading="lazy" decoding="async"
+                alt="BBC News interactive on what Trump has said about different countries"
+              /><span>BBC NEWS · INTERACTIVE</span>
               <h3>What has Trump said about your country?</h3>
               <p>
                 Lead developer on an interactive exploring the president’s
@@ -277,18 +306,11 @@
             href="https://rushlet.github.io/GetTogether/"
             target="_blank"
             rel="noreferrer"
-            ><div
-              class="hobby-art calendar-art"
-              role="img"
-              aria-label="Illustrated calendar interface"
-            >
-              <span class="ui-top"><i></i><i></i><i></i><b>GETTOGETHER</b></span
-              ><span class="calendar-month">MARCH <b>2026</b></span
-              ><span class="calendar-days"
-                ><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i><i>S</i><i>S</i><b>2</b
-                ><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b></span
-              ><span class="calendar-callout">Everyone’s free! <b>✓</b></span>
-            </div>
+            ><img
+              class="hobby-photo"
+              src="assets/get-together.webp" width="1160" height="889" loading="lazy" decoding="async"
+              alt="GetTogether camping trip poll with an availability calendar and best dates"
+            />
             <span class="work-list-meta">PRODUCT EXPERIMENT</span>
             <h3>GetTogether</h3>
             <p>A calendar app to find the dates when the whole gang is free.</p>
@@ -319,8 +341,8 @@
           <article class="hobby-card">
             <img
               class="hobby-photo"
-              src="assets/number-ones.webp" width="1199" height="805" loading="lazy" decoding="async"
-              alt="Interactive visual analysis of UK number one songs"
+              src="assets/number-ones.webp" width="1160" height="629" loading="lazy" decoding="async"
+              alt="Bubble chart comparing how many weeks artists spent at number one"
             /><span class="work-list-meta">DISSERTATION · FIRST CLASS</span>
             <h3>A visual analysis of UK number 1s</h3>
             <p>
@@ -328,21 +350,15 @@
               interactive visualisations in D3. A favourite project that needs a
               refresh.
             </p>
-            <a
-              href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-2cf6ae2a1602"
-              target="_blank"
-              rel="noreferrer"
-              >Read the write-up ↗</a
-            >
+            <div class="hobby-card-links">
+              <a href="https://rushlet.github.io/ci301_data-vis/website/project.html" target="_blank" rel="noreferrer">Explore the visualisation ↗</a>
+              <a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-2cf6ae2a1602" target="_blank" rel="noreferrer">Read the write-up ↗</a>
+            </div>
           </article>
-          <a
-            class="hobby-card"
-            href="https://bit.ly/noom-360"
-            target="_blank"
-            rel="noreferrer"
-            ><img
+          <article class="hobby-card">
+            <img
               class="hobby-photo"
-              src="assets/noom.webp" width="1110" height="598" loading="lazy" decoding="async"
+              src="assets/noom-archive.jpg" width="400" height="400" loading="lazy" decoding="async"
               alt="Visual from Noom: Dinks &amp; Donks, a NASA Space Apps project"
             /><span class="work-list-meta">NASA SPACE APPS · VR</span>
             <h3>Noom: Dinks &amp; Donks</h3>
@@ -351,37 +367,27 @@
               Challenge. I created its soundtrack from NASA audio and original
               music.
             </p>
-            <b>Explore the experience ↗</b></a
-          >
+          </article>
           <article class="hobby-card">
-            <div
-              class="hobby-art produce-art"
-              role="img"
-              aria-label="Illustrated seasonal fruit and vegetables"
-            >
-              <span>WHAT’S IN SEASON?</span><i class="fruit fruit-one"></i
-              ><i class="fruit fruit-two"></i><i class="fruit fruit-three"></i
-              ><i class="fruit fruit-four"></i><b>GOOD FOOD, RIGHT NOW</b>
-            </div>
+            <img
+              class="hobby-photo"
+              src="assets/seasonal-produce.webp" width="1160" height="630" loading="lazy" decoding="async"
+              alt="Seasonal Produce showing when aubergines are in season, with Disco Mode on"
+            />
             <span class="work-list-meta">HAND-CODED · MADE WITH A FRIEND</span>
             <h3>Seasonal fruit &amp; veg</h3>
             <p>
-              A small, practical guide ideated and built with a friend to make
-              seasonal produce easier to discover.
+              An unfinished prototype I built with a friend to help people find
+              out when fruit and vegetables are in season.
             </p>
+            <a href="https://good-egg.github.io/seasonal-produce/" target="_blank" rel="noreferrer">Visit the prototype ↗</a>
           </article>
           <article class="hobby-card">
-            <div
-              class="hobby-art poli-art"
-              role="img"
-              aria-label="Illustrated swipe-card interface"
-            >
-              <span>POLITINDER</span>
-              <div>
-                <b>POLICY<br />MATCH</b><i>←</i><i>→</i>
-              </div>
-              <small>DATA SCRAPING · MADE WITH A FRIEND</small>
-            </div>
+            <img
+              class="hobby-photo"
+              src="assets/politinder.webp" width="1132" height="782" loading="lazy" decoding="async"
+              alt="PoliTinder showing a tax policy card"
+            />
             <span class="work-list-meta">HAND-CODED · DATA PROJECT</span>
             <h3>PoliTinder</h3>
             <p>

@@ -8,16 +8,16 @@ if (preview) {
 
   const views = {
     globe: {
-      src: "assets/climate-change-globe.webp",
+      src: "assets/how-much-warmer-preview.webp",
       alt: "The global temperature-change globe from How much warmer is your city?",
       label: "GLOBAL VIEW",
       caption: "Global view: a 3D globe mapped with temperature-change data.",
     },
     city: {
-      src: "assets/climate-change-chart.webp",
-      alt: "A city temperature chart from How much warmer is your city?, shown on a laptop screen.",
+      src: "assets/how-much-warmer-city.webp",
+      alt: "The BBC story with Brighton selected, showing recorded January and July temperatures.",
       label: "CITY LOOKUP",
-      caption: "City view: monthly temperatures and projections for a selected place.",
+      caption: "City view: recorded January and July temperatures for Brighton.",
     },
   };
 
