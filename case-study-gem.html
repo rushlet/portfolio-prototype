@@ -45,9 +45,11 @@
         </p>
         <h1>Global Energy<br /><em>Monitor dashboard</em></h1>
         <p class="case-deck">
-          The Global Coal Plant Tracker dashboard helps readers explore
-          power-plant data across connected charts. One filter selection can
-          carry across the views they want to compare.
+          The Global Coal Plant Tracker presents coal power data across several
+          charts. To compare those views, readers would have had to apply the
+          same filter in each chart. I used the Flourish API to connect them to
+          shared dashboard controls, so readers could make one selection and see
+          every connected chart update together.
         </p>
         <div class="case-facts">
           <div><b>My role</b><span>Freelance developer</span></div>
@@ -56,62 +58,14 @@
         </div>
       </section>
       <figure class="section-wrap case-figure gem-evidence">
-        <img src="assets/gem-dashboard-preview.png" width="1090" height="511" alt="The Global Coal Plant Tracker dashboard showing a shared control area and several charts." loading="lazy" decoding="async" />
-        <figcaption>Dashboard screenshot from the Global Coal Plant Tracker. Tracker and data by Global Energy Monitor.</figcaption>
+        <img src="assets/gem-dashboard-preview.png" width="1090" height="511" alt="Three views from the coal power dashboard, including a treemap and two bar chart views." loading="lazy" decoding="async" />
+        <figcaption>Chart views from the Global Coal Plant Tracker. Tracker and data by Global Energy Monitor.</figcaption>
       </figure>
       <div class="case-body section-wrap">
         <section class="case-prose">
-          <p class="eyebrow">THE CHALLENGE</p>
-          <h2>Help people see the whole picture.</h2>
-          <p>
-            Global Energy Monitor researches and publishes the tracker data.
-            For the dashboard, readers needed to apply a filter once and
-            compare results across several Flourish visualisations.
-          </p>
-        </section>
-        <section class="case-prose case-highlight">
-          <p class="eyebrow">MY CONTRIBUTION</p>
-          <h2>Connect the controls to every view.</h2>
-          <p>
-            I integrated the charts using the Flourish API. A reader changes
-            a shared dashboard filter, the dashboard applies the selection
-            through the API, and the connected charts show the filtered data.
-            I worked through sorting and data-mapping edge cases so the views
-            behaved consistently.
-          </p>
-          <ul>
-            <li>
-              Connected dashboard-level filters to multiple embedded
-              visualisations.
-            </li>
-            <li>Worked through data sorting and mapping edge cases.</li>
-            <li>
-              Built a shared experience around a set of separately authored
-              charts.
-            </li>
-          </ul>
-        </section>
-        <section class="case-prose">
-          <p class="eyebrow">WHAT MADE IT INTERESTING</p>
-          <h2>One interface, several data stories.</h2>
-          <p>
-            The Flourish API made it possible to combine chart experiences, but
-            the dashboard still needed to make the relationship between controls
-            and charts feel predictable. The project was a useful exercise in
-            thinking beyond the individual visualisation: the product experience
-            lives in how the views work together.
-          </p>
-        </section>
-        <section class="case-prose">
-          <p class="eyebrow">WHAT I LEARNED</p>
-          <h2>Data tools need clear shared controls.</h2>
-          <p>
-            Coordinating filters across charts made the relationship between
-            data and interface especially visible. It reinforced the value of
-            thinking about the whole journey through the dashboard, and of
-            treating sorting and filtering as part of the story people are
-            trying to understand.
-          </p>
+          <h2>Comparing views with one filter</h2>
+          <p>The visualisations were authored separately. I used the Flourish API to pass the dashboard’s selected filter to each connected chart, and worked through sorting and data-mapping edge cases so the charts used the same selection consistently.</p>
+          <p>Open the dashboard and change a shared filter to compare the same subset of coal power data across views.</p>
           <div class="case-links">
             <a
               class="button-link"

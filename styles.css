@@ -136,6 +136,7 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; border-ra
 .contact-layout h2 { font-size: clamp(4rem, 10vw, 9rem); }
 .contact-copy { max-width: 390px; padding-bottom: .4rem; }
 .contact-copy > p:first-child { font-size: 1.12rem; }
+.contact-links { display: flex; flex-wrap: wrap; gap: .75rem; }
 footer { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(30,49,90,.2); }
 footer > span { font-size: .65rem; font-weight: 800; }
 .footer-mark { font-size: 1.1rem; }
