@@ -42,7 +42,7 @@
         <a class="back-link" href="work.html">← Back to Work</a>
         <p class="eyebrow">FLOURISH · CHART ENGINEERING</p>
         <h1>Responsive labels for pie and donut charts</h1>
-        <p class="case-deck">I led the design and engineering of external labels for Flourish pie and donut charts. The layout gives small slices room for a label and adapts as charts resize or appear in a grid.</p>
+        <p class="case-deck">A slice can be big enough to see and still be too small to label. I led the design and engineering of external labels for Flourish’s pie and donut charts, so readers could match labels to small slices even in a grid of charts.</p>
         <div class="case-facts">
           <div><b>My role</b><span>Feature lead, working with product designers</span></div>
           <div><b>Built with</b><span>D3 and SVG</span></div>
@@ -121,16 +121,16 @@
         <section class="case-prose">
           <h2>How the layout works</h2>
           <p>Labels form columns on either side of the chart. Elbow leader lines connect each label to its slice. The layout adjusts vertical spacing to reduce overlaps and can wrap or truncate long labels. When space runs out, it hides labels it cannot place while favouring placements close to their segments.</p>
-          <p>Segment count, text length, font size and available space all affect what fits. A legend can still give readers a way to identify categories whose labels are hidden.</p>
+          <p>I also updated the legend’s <strong>Auto</strong> setting to respond to what the labels show. Auto can hide the legend when labels already show category names and values, and shows it with value-only labels so readers can identify the categories. Auto also considers how many slices there are, how long the labels are, the font size and the space available when deciding whether a legend is needed.</p>
         </section>
         <section class="case-prose">
           <h2>Designing for more than one chart</h2>
-          <p>I worked with product designers through review and a substantial rework. We needed a default chart makers could override, with behaviour that held up when the chart resized, appeared in a grid or transitioned between label states.</p>
-          <p>Several small slices on the same side can fill one column even when the other has room. A zero-value category also needs consideration because it has no visible slice for a leader line to point to.</p>
+          <p>I worked with product designers to make the layout respond as a chart resized or appeared in a grid. I also handled the animated transitions between label states.</p>
+          <p>I fixed cases where labels clustered on one side, where a label had zero width and where a category had a value of zero. A zero-value category has no visible slice for a leader line to point to.</p>
         </section>
         <section class="case-prose">
           <h2>Shipping a new default</h2>
-          <p>In October 2026, we made external labels the default for new charts and kept internal labels available as an option. A new major template version let existing charts keep their appearance. The team also updated starter examples to show the new default.</p>
+          <p>In October 2026, we shipped the long-requested feature as the default for new charts and kept internal labels available as an option. We released it in a new major template version so existing charts kept their appearance. I worked with a designer to update several starter examples so chart makers could see the new default as soon as they tried the template.</p>
         </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More work">

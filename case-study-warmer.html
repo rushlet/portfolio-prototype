@@ -46,26 +46,18 @@
         </p>
         <h1>How much warmer<br /><em>is your city?</em></h1>
         <p class="case-deck">
-          How do you show what global warming means for the place someone lives?
-          We built a BBC News story that let readers look up temperature changes
-          in around 1,000 cities.
+          We built a BBC News interactive that let readers see how temperatures
+          had changed in around 1,000 cities and how much warmer each could get
+          by 2100.
         </p>
         <p class="case-contribution">
-          <strong>My contribution.</strong> I developed the D3 charts and used Scrollama to
-          reveal the temperature projections as readers moved through the story.
-        </p>
-        <p class="case-contribution">
-          The team found that putting four temperature projections on one chart
-          made them hard to follow. Separate static charts made the scenarios
-          hard to compare. We used scroll to introduce the projections in steps
-          within the same chart.
+          <strong>My contribution.</strong> I led development of the scroll-driven
+          charts and animations, and contributed to the 3D globe.
         </p>
         <div class="case-facts">
           <div><b>My role</b><span>Senior developer</span></div>
-          <div>
-            <b>Focus</b><span>Scrollytelling · SVG · accessibility</span>
-          </div>
-          <div><b>Team</b><span>Design, editorial, development</span></div>
+          <div><b>Published in</b><span>27 languages</span></div>
+          <div><b>Audience</b><span>Over 1 million readers in the first few days</span></div>
         </div>
       </section>
       <section
@@ -118,59 +110,71 @@
       </section>
       <script src="climate-preview.js" defer></script>
       <div class="case-body section-wrap">
-        <section class="case-prose case-highlight">
-          <h2>One story, many places and languages.</h2>
-          <p>
-            The team used one codebase to publish in 27 languages. The story
-            loaded the globe data first and fetched city projections after a
-            reader chose a place. That kept the city lookup useful on slower
-            connections and let us take the same visual story to different
-            language editions.
-          </p>
-          <ul>
-            <li>
-              Built the scrolly chart sequence and its transitions with D3 and
-              SVG.
-            </li>
-            <li>
-              Prepared data and assets to load in manageable chunks, and
-              optimised imagery.
-            </li>
-            <li>
-              Kept a useful path through the story when JavaScript was
-              unavailable.
-            </li>
-          </ul>
-        </section>
+        <figure class="case-award">
+          <blockquote cite="https://wan-ifra.org/2020/04/strong-nordic-performance-as-wan-ifra-european-digital-media-awards-announced/">
+            <p>“Amazing from start to finish. Proves the power of data visualisation when it comes to illustrating an important topic.”</p>
+          </blockquote>
+          <figcaption>
+            WAN-IFRA judges · <a href="https://wan-ifra.org/2020/04/strong-nordic-performance-as-wan-ifra-european-digital-media-awards-announced/">Best Data Visualisation, 2020 European Digital Media Awards</a>
+          </figcaption>
+        </figure>
         <section class="case-prose">
-          <p class="eyebrow">ACCESSIBILITY IN THE EXPERIENCE</p>
-          <h2>Motion with an off switch.</h2>
+          <h2>Four possible futures, one chart</h2>
           <p>
-            The animated story needed to respect readers who prefer reduced
-            motion. I worked with the team on an animation toggle and support
-            for the operating system’s reduced-motion setting. The interactive
-            also had to keep its meaning in the surrounding text and remain
-            understandable with keyboard and assistive technology.
+            Once readers picked a city, we needed to show how much its
+            temperatures could rise under four different emissions scenarios.
+            Plotting all four projections at once made the chart hard to
+            follow. Separate charts looked too similar for readers to spot the
+            differences easily. I built a D3 chart that introduced each
+            scenario in turn as readers scrolled, so they could compare the
+            projections in the same view.
+          </p>
+          <p>
+            We adapted Scrollama to work with the BBC’s internal tooling.
+            The chart used <code>position: sticky</code> to stay in view as
+            readers moved through the text. We checked for browser support and
+            switched to <code>position: fixed</code> in older browsers such as
+            Internet Explorer 11.
           </p>
         </section>
         <section class="case-prose">
-          <p class="eyebrow">WHAT I LEARNED</p>
-          <h2>Good scrollytelling is careful coordination.</h2>
+          <h2>Motion with an off switch</h2>
           <p>
-            The narrative had to work with motion off and stay understandable
-            while the reader waited for data. Those constraints shaped how we
-            paired the charts with text and what the story loaded first. I wrote
-            about the implementation for the BBC Visual and Data Journalism
-            team blog.
+            One toggle let readers turn off the globe rotation, chart
+            transitions and animated illustrations before any of them began.
+            We used JavaScript events to send the same setting to all three
+            parts of the story. If a reader’s device was set to reduce motion,
+            animations started off.
+          </p>
+          <p>
+            Readers could tab to controls and use the arrow keys to move through
+            the story, including the chart sequence. We provided a text
+            description of the globe for screen reader users and made sure the
+            text alongside the chart explained the projections on its own.
+          </p>
+          <a class="text-link" href="accessibility.html">Read more about my accessibility work ↗</a>
+        </section>
+        <section class="case-prose">
+          <h2>One codebase for 27 languages</h2>
+          <p>
+            The BBC World Service published the story in multiple languages.
+            We converted a spreadsheet of translations into a JSON file for
+            each language so all 27 editions could use the same codebase.
+          </p>
+          <p>
+            To keep the initial download smaller on slower connections, we
+            loaded the globe data first and fetched projections only for the
+            city the reader chose. A static map showed the same temperature
+            data when JavaScript was unavailable.
+          </p>
+          <p>
+            I wrote about how we built the interactive for the BBC Visual and
+            Data Journalism team blog.
           </p>
           <div class="case-links">
             <a
               class="button-link"
-              href="https://bbc.in/3aPYdrs"
-              target="_blank"
-              rel="noreferrer"
-              >Read the BBC story ↗</a
-            ><a class="text-link" href="https://medium.com/@bbc_visual_and_data_journalism/how-much-warmer-is-your-city-behind-the-scenes-of-our-climate-change-interactive-7d97673b8121"
+              href="https://medium.com/@bbc_visual_and_data_journalism/how-much-warmer-is-your-city-behind-the-scenes-of-our-climate-change-interactive-7d97673b8121"
               >Read the behind-the-scenes write-up ↗</a
             >
           </div>
