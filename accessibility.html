@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#f7f6f0" />
     <meta
       name="description"
-      content="At Flourish I led accessibility work across the chart template library. I organised findings from an external audit, documented core user journeys and helped turn the findings into fixes across the library."
+      content="Accessibility engineering at BBC News and Flourish, from motion controls in scrollytelling to keyboard, screen-reader and touch access in chart templates."
     />
-    <title>Engineering accessible data visualisations — Becky Rush</title>
+    <title>Engineering accessible data visualisations and web experiences — Becky Rush</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
@@ -40,24 +40,32 @@
     <main id="main" tabindex="-1" class="case-page editorial-case">
       <section class="case-hero section-wrap">
         <a class="back-link" href="work.html">← Back to Work</a>
-        <p class="eyebrow">FLOURISH · ACCESSIBILITY</p>
-        <h1>Engineering accessible data visualisations</h1>
-        <p class="case-deck">At Flourish I led accessibility work across the chart template library. I organised findings from an external audit, documented core user journeys and helped turn the findings into fixes across the library.</p>
-        <div class="case-facts">
-          <div><b>My role</b><span>Template remediation lead</span></div>
-          <div><b>Timeframe</b><span>2024–2025</span></div>
-          <div><b>Standard guiding the work</b><span>WCAG 2.1 AA</span></div>
-        </div>
+        <p class="eyebrow">ACCESSIBILITY</p>
+        <h1>Accessibility engineering at BBC News and Flourish</h1>
+        <p class="case-deck">At BBC News I gave readers control over animation in scrollytelling. At Flourish I led accessibility fixes across the chart template library and coordinated the response to an external audit across three codebases.</p>
       </section>
       <div class="case-body section-wrap">
+        <section class="case-prose case-highlight">
+          <h2>BBC News motion controls</h2>
+          <p>As an accessibility champion in BBC News’s Visual and Data Journalism team, I introduced a motion toggle when we started building stories that animated as readers scrolled. Readers could switch off animation before it began. We first used the toggle on <a href="https://www.bbc.co.uk/news/resources/idt-a524dd3a-c09c-4f09-bc03-c5006d75ef96">Falling through the pay gap</a>. For <a href="case-study-warmer.html">How much warmer is your city?</a>, we also made it follow the reader’s reduced-motion setting.</p>
+          <figure class="case-figure">
+            <img src="assets/bbc-motion-toggle.webp" width="1200" height="357" alt="The BBC climate story shows an Animation on switch below the headline and before the interactive content." loading="lazy" decoding="async" />
+            <figcaption>Readers could turn off animation before it began. The climate story also respected the reader’s reduced-motion setting.</figcaption>
+          </figure>
+        </section>
         <section class="case-prose">
-          <h2>From audit to release</h2>
+          <h2>Flourish from audit to release</h2>
           <p>I owned the template remediation work and coordinated the response to the external audit across three codebases. I organised and triaged the findings, documented core user flows and prepared questions for a workshop with the auditor. That gave the teams a way to work through barriers in the order people encountered them and turn the findings into fixes.</p>
           <p>WCAG 2.1 AA guided the improvements ahead of the European Accessibility Act in 2025. My direct engineering responsibility was the visualisation template library.</p>
         </section>
         <section class="case-prose case-highlight">
           <h2>Keyboard access to chart popups</h2>
           <p>In hierarchy charts, a popup can contain the details a reader needs about a category. If those details depend on hovering, a reader using a keyboard can miss them. I made the popups reachable by keyboard and used visible focus to show which item the reader was on.</p>
+          <figure class="case-figure">
+            <img src="assets/flourish-accessible-popup.webp" width="900" height="1010" alt="A Flourish scatter plot with the Singapore popup open, showing region, population, GDP and life expectancy." loading="lazy" decoding="async" />
+            <figcaption>The popup shows the details associated with a data point. Screenshot from <a href="https://flourish.studio/blog/accessibility-improvements/">Flourish’s accessibility article</a>.</figcaption>
+          </figure>
+          <p><a href="https://flo.uri.sh/visualisation/21159778/embed?auto=1">Try keyboard focus in a public Flourish treemap</a>. Press Tab to reach a tile. The highlighted tile shows where you are.</p>
           <p>I also worked on the card carousel’s roles and keyboard interaction so people could identify the control and move through its cards.</p>
         </section>
         <section class="case-prose">
