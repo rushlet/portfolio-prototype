@@ -1398,11 +1398,18 @@ footer > span {
     transform 0.15s ease,
     box-shadow 0.15s ease;
 }
-.motion-enabled .story-card:hover {
+.motion-enabled .story-card:has(> a:hover) {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
-.story-card > img {
+.card-image-link {
+  display: block;
+}
+.card-image-link:focus-visible {
+  position: relative;
+  outline-offset: -4px;
+}
+.story-card .card-image-link img {
   display: block;
   width: 100%;
   height: 180px;
@@ -1410,13 +1417,13 @@ footer > span {
   object-position: top;
   border-bottom: 1px solid var(--blue);
 }
-.story-card > .story-presenter-thumbnail {
+.story-card img.story-presenter-thumbnail {
   object-position: center;
 }
 .story-card > span,
 .story-card h3,
 .story-card p,
-.story-card > b {
+.story-card > .card-footer-link {
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -1437,11 +1444,15 @@ footer > span {
   font-size: 0.82rem;
   line-height: 1.5;
 }
-.story-card > b {
+.card-footer-link {
+  align-self: flex-start;
+}
+.story-card > .card-footer-link {
   margin-top: auto;
   margin-bottom: 1rem;
   color: var(--blue);
   font-size: 0.75rem;
+  font-weight: 700;
 }
 .hobby-grid {
   display: grid;
@@ -1460,7 +1471,7 @@ footer > span {
   box-shadow: var(--shadow);
   text-decoration: none;
 }
-.hobby-card > :not(.hobby-art):not(.hobby-photo) {
+.hobby-card > :not(.hobby-art, .hobby-photo, .card-image-link) {
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -1477,8 +1488,7 @@ footer > span {
   margin-bottom: 1rem;
   font-size: 0.86rem;
 }
-.hobby-card > b,
-.hobby-card > a,
+.hobby-card > .card-footer-link,
 .hobby-card-links {
   margin-top: auto;
   color: var(--blue);
@@ -1865,7 +1875,7 @@ footer > span {
   .hobby-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .story-card > img {
+  .story-card .card-image-link img {
     height: 150px;
   }
   .work-jump {
