@@ -68,6 +68,15 @@ em {
   color: var(--pink);
   font-style: normal;
 }
+code {
+  font-size: 0.93rem;
+  background-color: var(--yellow);
+}
+figcaption {
+  font-size: 0.75rem;
+  color: var(--ink);
+  opacity: 0.9;
+}
 .bold {
   font-weight: 700;
 }
@@ -1032,6 +1041,9 @@ footer > span {
   color: var(--pink-ink);
   font-size: 0.68rem;
   text-transform: uppercase;
+  @media (max-width: 620px) {
+    align-self: anchor-center;
+  }
 }
 .case-facts span {
   font-size: 0.9rem;
@@ -2383,6 +2395,9 @@ footer > span {
     align-items: flex-start;
     flex-direction: column;
   }
+  .warm-preview-caption {
+    flex: none;
+  }
 }
 
 /* Homepage hero composition and responsive layout */
@@ -2932,11 +2947,6 @@ footer > span {
 .access-examples p {
   margin: 0;
 }
-.case-contribution {
-  max-width: 58ch;
-  margin: 1.25rem 0 0;
-  font-size: 1.05rem;
-}
 .editorial-case .case-hero h1 {
   max-width: 18ch;
   font-size: clamp(2.65rem, 8.6vw, 7rem);
@@ -3028,7 +3038,7 @@ footer > span {
   padding: 0.4rem 0.65rem;
   border-radius: 0.45rem;
   font-size: 0.85rem;
-  font-weight: 750;
+  font-weight: 500;
 }
 .chart-label-options input:checked + span {
   color: var(--white);
@@ -3049,13 +3059,9 @@ footer > span {
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
 }
-.chart-comparison {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
 .chart-preview {
   min-width: 0;
+  margin-bottom: 0.5rem;
 }
 .chart-preview .flourish-embed {
   overflow: hidden;
@@ -3070,25 +3076,6 @@ footer > span {
   display: block;
   width: 100%;
   height: auto;
-}
-.chart-preview .chart-preview-label,
-.chart-preview-mobile {
-  display: none;
-}
-
-@media (min-width: 68rem) {
-  .has-flourish-previews .chart-comparison {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 375px);
-  }
-  .has-flourish-previews .chart-preview-mobile,
-  .has-flourish-previews .chart-preview-label {
-    display: block;
-  }
-  .has-flourish-previews .chart-preview-label {
-    margin: 0 0 0.35rem;
-    font-size: 0.85rem;
-    font-weight: 750;
-  }
 }
 
 @media (max-width: 699px) {

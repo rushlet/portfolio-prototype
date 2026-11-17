@@ -24,6 +24,7 @@ if (motionToggle) {
     motionToggle.setAttribute("aria-pressed", String(enabled));
     motionToggle.setAttribute("aria-disabled", String(reducedMotion.matches));
     motionLabel.textContent = enabled ? "Motion on" : "Motion off";
+    document.dispatchEvent(new Event("site-motion-change"));
   };
 
   motionToggle.addEventListener("click", () => {

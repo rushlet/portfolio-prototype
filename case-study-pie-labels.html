@@ -16,25 +16,24 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
-        >RUSHLET</a
-      >
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home">RUSHLET</a>
       <nav aria-label="Main navigation">
-        <a href="work.html">Work</a><a href="resume.html">About</a
-        ><a href="index.html#contact">Contact</a
-        ><span class="nav-motion-group" hidden
-          ><span class="nav-separator" aria-hidden="true"></span
-          ><button
+        <a href="work.html">Work</a>
+        <a href="resume.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <span class="nav-motion-group" hidden>
+          <span class="nav-separator" aria-hidden="true"></span>
+          <button
             class="motion-toggle"
             type="button"
             data-hero-motion-toggle
             aria-label="Motion"
             aria-pressed="false"
           >
-            <span class="motion-indicator" aria-hidden="true"></span
-            ><span data-hero-motion-label>Motion off</span>
-          </button></span
-        >
+            <span class="motion-indicator" aria-hidden="true"></span>
+            <span data-hero-motion-label>Motion off</span>
+          </button>
+        </span>
       </nav>
     </header>
     <main id="main" tabindex="-1" class="case-page editorial-case">
@@ -42,21 +41,37 @@
         <a class="back-link" href="work.html">← Back to Work</a>
         <p class="eyebrow">FLOURISH · CHART ENGINEERING</p>
         <h1>Responsive labels for pie and donut charts</h1>
-        <p class="case-deck">A slice can be big enough to see and still be too small to label. I led the design and engineering of external labels for Flourish’s pie and donut charts, so readers could match labels to small slices even in a grid of charts.</p>
+        <p class="case-deck">
+          Even when a slice is easy to see, its label might not fit inside it. Flourish didn’t yet
+          support placing labels outside pie or donut charts. I led the implementation and
+          development of external labels and leader lines.
+        </p>
         <div class="case-facts">
-          <div><b>My role</b><span>Feature lead, working with product designers</span></div>
-          <div><b>Built with</b><span>D3 and SVG</span></div>
-          <div><b>Released</b><span>October 2026</span></div>
+          <div>
+            <b>My role</b>
+            <span>Development lead</span>
+          </div>
+          <div>
+            <b>Built with</b>
+            <span>D3 and SVG</span>
+          </div>
+          <div>
+            <b>Released</b>
+            <span>October 2026</span>
+          </div>
         </div>
       </section>
       <div class="case-body section-wrap">
-        <section class="case-prose">
-          <h2>Labels had to fit inside the slice</h2>
-          <p>Before this release, labels inside the slices were the only placement option in Flourish pie and donut charts. When a slice was too small to hold its label, readers had to look elsewhere for the category name. External labels gave those names room outside the pie, with leader lines showing which slice each label belonged to.</p>
-        </section>
-        <section class="case-prose case-highlight chart-examples" aria-labelledby="chart-examples-title">
+        <section
+          class="case-prose case-highlight chart-examples"
+          aria-labelledby="chart-examples-title"
+        >
           <h2 id="chart-examples-title">Before and after</h2>
-          <p>Switch between the original layout and the new default using the same UK electricity data. Look for small slices that gain a label, especially in the grid and at mobile widths.</p>
+          <p>
+            Switch between internal and external labels on the same UK electricity chart. Look for
+            the coal slice: its label appears outside the pie, with a leader line pointing back to
+            the slice.
+          </p>
           <section class="chart-example" aria-labelledby="chart-single-title">
             <h3 id="chart-single-title">Single chart</h3>
             <fieldset class="chart-label-options" hidden>
@@ -66,27 +81,85 @@
                 <span>Before · Internal labels</span>
               </label>
               <label>
-                <input type="radio" name="single-labels" value="visualisation/30906647?1823954" checked />
+                <input
+                  type="radio"
+                  name="single-labels"
+                  value="visualisation/30906647?1823954"
+                  checked
+                />
                 <span>After · External labels</span>
               </label>
             </fieldset>
-            <div class="chart-comparison">
-              <div class="chart-preview">
-                <p class="chart-preview-label">Desktop</p>
-                <div class="flourish-embed flourish-chart" data-src="visualisation/30906647?1823954">
-                  <noscript><img src="https://public.flourish.studio/visualisation/30906647/thumbnail" alt="UK electricity generation by source in 2024" loading="lazy" /></noscript>
-                </div>
-              </div>
-              <div class="chart-preview chart-preview-mobile">
-                <p class="chart-preview-label">Mobile</p>
-                <div data-mobile-chart></div>
+            <div class="chart-preview">
+              <div class="flourish-embed flourish-chart" data-src="visualisation/30906647?1823954">
+                <noscript>
+                  <img
+                    src="https://public.flourish.studio/visualisation/30906647/thumbnail"
+                    alt="UK electricity generation by source in 2024"
+                    loading="lazy"
+                  />
+                </noscript>
               </div>
             </div>
-            <div class="chart-example-links" role="group" aria-label="Open single chart in Flourish">
-              <a class="text-link" href="https://public.flourish.studio/visualisation/30909694/" aria-label="Open the single chart with internal labels in Flourish">Internal labels in Flourish ↗</a>
-              <a class="text-link" href="https://public.flourish.studio/visualisation/30906647/" aria-label="Open the single chart with external labels in Flourish">External labels in Flourish ↗</a>
+            <div
+              class="chart-example-links"
+              role="group"
+              aria-label="Open single chart in Flourish"
+            >
+              <a
+                class="text-link"
+                href="https://public.flourish.studio/visualisation/30909694/"
+                aria-label="Open the single chart with internal labels in Flourish"
+              >
+                Internal labels in Flourish ↗
+              </a>
+              <a
+                class="text-link"
+                href="https://public.flourish.studio/visualisation/30906647/"
+                aria-label="Open the single chart with external labels in Flourish"
+              >
+                External labels in Flourish ↗
+              </a>
             </div>
           </section>
+        </section>
+        <section class="case-prose">
+          <h2>Making room for labels and slices</h2>
+          <p>
+            My first implementation rendered and measured the labels, then made another pass to fit
+            as many as possible without collisions. After feedback and discussion, I switched to a
+            heuristic that calculated the candidate positions before rendering. It takes into
+            account the number of slices, label length, font size and available space, but
+            calculates these upfront before render. We expected it to place labels well in most
+            cases, and it simplified the code and avoided repeated layout passes.
+          </p>
+          <p>
+            I built a D3 layout that arranges labels on either side of the pie and connects them to
+            their slices with elbow leader lines. I used a spread function to space the labels
+            vertically and hid any that still overlapped. When there were too many labels to fit, I
+            dropped the ones with the longest leader lines first, keeping the labels closest to
+            their slices.
+          </p>
+          <p>
+            I also updated the legend’s
+            <strong>Auto</strong>
+            setting. When labels already show category names and values, Auto can hide the legend.
+            With value-only labels, the legend tells readers which category each slice represents.
+          </p>
+        </section>
+        <section
+          class="case-prose case-highlight chart-examples"
+          aria-labelledby="chart-grid-section-title"
+        >
+          <h2 id="chart-grid-section-title">Making the layout work at different sizes</h2>
+          <p>
+            I made the label layout recalculate as the available space changed. That mattered on
+            narrow screens and in grids, where each pie has less room for labels.
+          </p>
+          <p>
+            Compare the four years below to see how the placement changes when each pie has less
+            room.
+          </p>
           <section class="chart-example" aria-labelledby="chart-grid-title">
             <h3 id="chart-grid-title">Grid of charts</h3>
             <fieldset class="chart-label-options" hidden>
@@ -96,54 +169,92 @@
                 <span>Before · Internal labels</span>
               </label>
               <label>
-                <input type="radio" name="grid-labels" value="visualisation/30906686?1823954" checked />
+                <input
+                  type="radio"
+                  name="grid-labels"
+                  value="visualisation/30906686?1823954"
+                  checked
+                />
                 <span>After · External labels</span>
               </label>
             </fieldset>
-            <div class="chart-comparison">
-              <div class="chart-preview">
-                <p class="chart-preview-label">Desktop</p>
-                <div class="flourish-embed flourish-chart" data-src="visualisation/30906686?1823954">
-                  <noscript><img src="https://public.flourish.studio/visualisation/30906686/thumbnail" alt="UK electricity generation by source across four years" loading="lazy" /></noscript>
-                </div>
-              </div>
-              <div class="chart-preview chart-preview-mobile">
-                <p class="chart-preview-label">Mobile</p>
-                <div data-mobile-chart></div>
+            <div class="chart-preview">
+              <div class="flourish-embed flourish-chart" data-src="visualisation/30906686?1823954">
+                <noscript>
+                  <img
+                    src="https://public.flourish.studio/visualisation/30906686/thumbnail"
+                    alt="UK electricity generation by source across four years"
+                    loading="lazy"
+                  />
+                </noscript>
               </div>
             </div>
-            <div class="chart-example-links" role="group" aria-label="Open grid of charts in Flourish">
-              <a class="text-link" href="https://public.flourish.studio/visualisation/30909711/" aria-label="Open the grid of charts with internal labels in Flourish">Internal labels in Flourish ↗</a>
-              <a class="text-link" href="https://public.flourish.studio/visualisation/30906686/" aria-label="Open the grid of charts with external labels in Flourish">External labels in Flourish ↗</a>
+            <div
+              class="chart-example-links"
+              role="group"
+              aria-label="Open grid of charts in Flourish"
+            >
+              <a
+                class="text-link"
+                href="https://public.flourish.studio/visualisation/30909711/"
+                aria-label="Open the grid of charts with internal labels in Flourish"
+              >
+                Internal labels in Flourish ↗
+              </a>
+              <a
+                class="text-link"
+                href="https://public.flourish.studio/visualisation/30906686/"
+                aria-label="Open the grid of charts with external labels in Flourish"
+              >
+                External labels in Flourish ↗
+              </a>
             </div>
           </section>
         </section>
         <section class="case-prose">
-          <h2>How the layout works</h2>
-          <p>Labels form columns on either side of the chart. Elbow leader lines connect each label to its slice. The layout adjusts vertical spacing to reduce overlaps and can wrap or truncate long labels. When space runs out, it hides labels it cannot place while favouring placements close to their segments.</p>
-          <p>I also updated the legend’s <strong>Auto</strong> setting to respond to what the labels show. Auto can hide the legend when labels already show category names and values, and shows it with value-only labels so readers can identify the categories. Auto also considers how many slices there are, how long the labels are, the font size and the space available when deciding whether a legend is needed.</p>
-        </section>
-        <section class="case-prose">
-          <h2>Designing for more than one chart</h2>
-          <p>I worked with product designers to make the layout respond as a chart resized or appeared in a grid. I also handled the animated transitions between label states.</p>
-          <p>I fixed cases where labels clustered on one side, where a label had zero width and where a category had a value of zero. A zero-value category has no visible slice for a leader line to point to.</p>
+          <h2>Crossfading labels when slices move</h2>
+          <p>
+            Filtering out a slice can shift the remaining slices and send a label to the other side
+            of the pie. I implemented three versions of each label: one for each side of the pie,
+            with the text aligned towards the chart, and a centred version for labels inside a
+            slice. When a label switched sides, I crossfaded between the two alignments so the text
+            did not travel across the chart.
+          </p>
+          <p>
+            I also made sure screen readers announced each label once, even though the chart
+            rendered three versions.
+          </p>
+          <p>
+            Try it in the <a href="#chart-grid-title">grid of charts</a> with external labels
+            selected. Filter out Wind &amp; Solar (yellow) on the 2020 chart and watch the
+            Nuclear label (light blue) crossfade to the other side.
+          </p>
         </section>
         <section class="case-prose">
           <h2>Shipping a new default</h2>
-          <p>In October 2026, we shipped the long-requested feature as the default for new charts and kept internal labels available as an option. We released it in a new major template version so existing charts kept their appearance. I worked with a designer to update several starter examples so chart makers could see the new default as soon as they tried the template.</p>
+          <p>
+            External labels became the default for new pie and donut charts, with internal labels
+            still available as an option. We shipped the change in a new major version of the
+            template so existing charts kept their original layout.
+          </p>
         </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More work">
         <a href="work.html#case-studies">All case studies</a>
-        <a href="case-study-gem.html">Next: Global Energy Monitor dashboard <span aria-hidden="true">↗</span></a>
+        <a href="case-study-publishing.html">
+          Next: Modernising publishing and export
+          <span aria-hidden="true">↗</span>
+        </a>
       </nav>
     </main>
     <footer class="site-footer section-wrap">
-      <a class="wordmark" href="index.html">RUSHLET</a
-      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
-      ><a href="index.html#contact">Get in touch ↗</a>
+      <a class="wordmark" href="index.html">RUSHLET</a>
+      <span>MADE WITH CURIOSITY IN BRIGHTON</span>
+      <a href="index.html#contact">Get in touch ↗</a>
     </footer>
-    <script>window.Flourish = { disable_autoload: true };</script>
+    <script>
+      window.Flourish = { disable_autoload: true };
+    </script>
     <script src="https://public.flourish.studio/resources/embed.js" defer></script>
     <script src="pie-chart-previews.js" defer></script>
     <script src="hero-motion.js" defer></script>
