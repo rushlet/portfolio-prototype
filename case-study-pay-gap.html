@@ -42,7 +42,11 @@
         <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
         <p class="eyebrow">BBC NEWS · DATA STORYTELLING</p>
         <h1>Falling through the pay gap</h1>
-        <p class="case-deck">I led development of a BBC News scrollytelling story that animated more than 10,000 company data points and gave readers control over motion.</p>
+        <p class="case-deck">
+          How do you show the UK’s gender pay gap one company at a time? I led development of a
+          BBC News story that rearranged more than 10,000 dots as readers scrolled, revealing
+          which companies paid men or women more on average and how large the gaps were.
+        </p>
       </section>
       <figure class="section-wrap case-figure">
         <img
@@ -57,12 +61,60 @@
       <div class="case-body section-wrap">
         <section class="case-prose">
           <h2>Getting 10,000 dots to move</h2>
-          <p>We wanted each company in the dataset to appear as a dot and move into different arrangements as readers scrolled. My first D3 and Canvas prototype slowed down under that load. A designer on the team suggested WebGL, so I built a prototype with regl to move the rendering work to the GPU. Once that worked, we could commit to the design.</p>
-          <p>For the histogram, I used D3 to calculate where the dots should go and regl to draw them. I put the axes, labels and highlighted points in an SVG layer over the canvas.</p>
+          <p>
+            Each dot represented a company. Keeping those dots as the chart changed let readers
+            follow the same dataset from a count of companies to a comparison of pay gaps.
+            My first D3 and Canvas prototype slowed down as the dots moved and eventually crashed
+            Chrome. A designer on the team suggested WebGL. I adapted an example built with regl
+            and connected it to the scroll sequence. With the GPU drawing the dots, I could run
+            the transitions and prove we could build the story around them.
+          </p>
+          <p>
+            The first circular layout I tried arranged the dots in a spiral. The pattern became
+            distracting once the dots moved, so we worked out how to arrange them into a more
+            even circle. For the histogram, I used D3 to calculate the dot positions and regl to
+            draw them. I added an SVG layer for the axes, labels and highlighted points.
+          </p>
+          <figure class="case-figure">
+            <img
+              src="assets/bbc-pay-gap-dot-prototypes.webp"
+              width="1260"
+              height="352"
+              alt="Early spiral clusters of company dots on the left and the final evenly spaced circle on the right."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>The spiral prototype on the left and the finished circle on the right.</figcaption>
+          </figure>
+        </section>
+        <section class="case-prose">
+          <h2>Keeping the charts available without JavaScript</h2>
+          <p>
+            The text referred to patterns in the charts, so readers still needed those visuals
+            if the script failed to load or JavaScript was disabled. I included static views at
+            key points in the story, including the breakdown of which companies paid men or
+            women more on average.
+          </p>
+          <figure class="case-figure" style="max-width: 430px">
+            <img
+              src="assets/bbc-pay-gap-static-fallback.webp"
+              width="430"
+              height="588"
+              alt="Static dot chart and text showing that 8,124 companies paid men more on average and 1,424 paid women more."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>One of the static charts readers saw when JavaScript was unavailable.</figcaption>
+          </figure>
         </section>
         <section class="case-prose">
           <h2>Making the story work without animation</h2>
-          <p>I added a motion toggle at the start of the article, before readers encountered any animation. I also made sure readers could tab through the content and use the arrow keys to scroll. When JavaScript was unavailable, static charts gave readers visual context alongside the text.</p>
+          <p>
+            Eileen Webb’s writing on motion sensitivity made me think about where the control
+            needed to be. I added a notice and a switch at the start of the article so readers
+            could turn off animation before they encountered any movement. I also made sure
+            they could tab through the content and use the arrow keys to scroll.
+          </p>
           <figure class="case-figure">
             <img
               src="assets/bbc-pay-gap-reader-response.webp"
@@ -73,10 +125,13 @@
               decoding="async"
             />
             <figcaption>
-              Eileen Webb, whose writing on motion sensitivity informed my work, responded to
-              the animation toggle on Twitter.
+              Eileen Webb’s response after I shared the motion toggle on Twitter.
             </figcaption>
           </figure>
+          <p>
+            If I revisited the story, I’d offer a downloadable CSV so screen-reader users could
+            explore the underlying figures themselves.
+          </p>
         </section>
         <section class="case-prose">
           <h2>Taking the approach into the next story</h2>

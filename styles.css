@@ -2981,7 +2981,7 @@ footer > span {
 }
 .publishing-states {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 .case-prose .publishing-states .case-figure {
@@ -2993,6 +2993,9 @@ footer > span {
   object-fit: contain;
   object-position: top;
   background: var(--white);
+}
+.publishing-states .case-figure .publishing-confirmation {
+  aspect-ratio: 518 / 303;
 }
 .chart-examples {
   padding-inline: clamp(0.85rem, 3vw, 2rem);
