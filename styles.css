@@ -68,6 +68,9 @@ em {
   color: var(--pink);
   font-style: normal;
 }
+.bold {
+  font-weight: 700;
+}
 .skip-link {
   z-index: 20;
   top: 0.5rem;
@@ -534,10 +537,12 @@ footer a:hover {
 }
 .more-tile {
   min-height: 325px;
+  max-width: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-self: center;
   border: var(--line);
   border-radius: 1rem;
   padding: 1.25rem;
@@ -762,7 +767,7 @@ footer > span {
 }
 .work-hero {
   padding-top: clamp(4rem, 9vw, 8rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
 }
 .work-hero h1,
 .resume-head h1,
@@ -1404,6 +1409,9 @@ footer > span {
   object-fit: cover;
   object-position: top;
   border-bottom: 1px solid var(--blue);
+}
+.story-card > .story-presenter-thumbnail {
+  object-position: center;
 }
 .story-card > span,
 .story-card h3,

@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f7f6f0" />
     <meta
       name="description"
-      content="A dashboard for Global Energy Monitor built with the Flourish API."
+      content="How I used the Flourish API to connect coal power charts with one country filter and prototype reusable dashboards for Global Energy Monitor."
     />
     <title>Global Energy Monitor dashboard — Becky Rush</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
@@ -39,21 +39,19 @@
     </header>
     <main id="main" tabindex="-1" class="case-page editorial-case">
       <section class="case-hero section-wrap">
-        <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
+        <a class="back-link" href="work.html#more-stories">← Back to other published work</a>
         <p class="eyebrow">
           <span class="eyebrow-icon pink-icon">02</span> FREELANCE · ENERGY DATA
         </p>
-        <h1>Global Energy<br /><em>Monitor dashboard</em></h1>
+        <h1>How is coal power changing<br /><em>in your country?</em></h1>
         <p class="case-deck">
-          The Global Coal Plant Tracker presents coal power data across several
-          charts. To compare those views, readers would have had to apply the
-          same filter in each chart. I used the Flourish API to connect them to
-          shared dashboard controls, so readers could make one selection and see
-          every connected chart update together.
+          Where are coal plants opening, and where are they closing? I built a
+          dashboard for Global Energy Monitor that lets readers pick a country
+          once and see how its coal fleet is changing across several charts.
         </p>
         <div class="case-facts">
-          <div><b>My role</b><span>Freelance developer</span></div>
-          <div><b>Focus</b><span>Flourish API · data · interaction</span></div>
+          <div><b>My role</b><span>Freelance front-end developer</span></div>
+          <div><b>Focus</b><span>Flourish API · WordPress · reusable templates</span></div>
           <div><b>Client</b><span>Global Energy Monitor</span></div>
         </div>
       </section>
@@ -63,9 +61,18 @@
       </figure>
       <div class="case-body section-wrap">
         <section class="case-prose">
+          <h2>Bringing the trackers into WordPress</h2>
+          <p>Global Energy Monitor (GEM) ran its existing tracker dashboards as standalone Dash apps hosted on Heroku. GEM brought me in for a short freelance engagement to prototype a way to bring interactive charts into its WordPress site and give staff a way to create new dashboards without needing a developer each time.</p>
+        </section>
+        <section class="case-prose">
           <h2>Comparing views with one filter</h2>
-          <p>The visualisations were authored separately. I used the Flourish API to pass the dashboard’s selected filter to each connected chart, and worked through sorting and data-mapping edge cases so the charts used the same selection consistently.</p>
-          <p>Open the dashboard and change a shared filter to compare the same subset of coal power data across views.</p>
+          <p>I started with the Global Coal Plant Tracker. I used the Flourish API to pass a single country selection to charts that had been authored separately. I worked through sorting and data mapping so readers could compare views like capacity added and retired, plant status, and the age of the operating fleet for the same country.</p>
+          <p>The prototype also explored updating chart titles, explanatory text and headline figures from the same selection, so the context could change alongside the data.</p>
+        </section>
+        <section class="case-prose">
+          <h2>Making the template reusable</h2>
+          <p>The template was designed around data from Google Sheets and configurable charts, text and filters. The Global Oil and Gas Plant Tracker gave us a second set of charts and data to test whether the same setup could work beyond coal.</p>
+          <p>Reusing the layout meant planning for different numbers of charts and for countries with missing data. Side-by-side charts helped readers compare views on wide screens. Stacking gave the charts room on smaller screens, but could leave the filter several charts above the view a reader wanted to change.</p>
           <div class="case-links">
             <a
               class="button-link"

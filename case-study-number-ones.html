@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <meta
+      name="description"
+      content="How I turned UK chart history and Spotify audio data into an interactive visual essay about number one singles."
+    />
+    <title>A visual analysis of UK number 1s — Becky Rush</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
+        >RUSHLET</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a><a href="resume.html">About</a
+        ><a href="index.html#contact">Contact</a
+        ><span class="nav-motion-group" hidden
+          ><span class="nav-separator" aria-hidden="true"></span
+          ><button
+            class="motion-toggle"
+            type="button"
+            data-hero-motion-toggle
+            aria-label="Motion"
+            aria-pressed="false"
+          >
+            <span class="motion-indicator" aria-hidden="true"></span
+            ><span data-hero-motion-label>Motion off</span>
+          </button></span
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="case-page editorial-case">
+      <section class="case-hero section-wrap">
+        <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
+        <p class="eyebrow">FINAL-YEAR PROJECT · DATA STORYTELLING</p>
+        <h1>A visual analysis of UK number 1s</h1>
+        <p class="case-deck">
+          Adele and Bob the Builder each had two UK number ones in my 1952–2018 dataset.
+          For my final-year project, I built an interactive essay about what reached the
+          top of the chart, how long it stayed there and how it sounded.
+        </p>
+        <div class="case-facts">
+          <div><b>My role</b><span>Research, analysis, design and development</span></div>
+          <div><b>Data</b><span>Official Charts and Spotify</span></div>
+          <div><b>Period</b><span>1952–2018</span></div>
+        </div>
+      </section>
+      <figure class="section-wrap case-figure">
+        <img
+          src="assets/number-ones.webp"
+          width="1160"
+          height="629"
+          alt="Bubble chart comparing how many weeks artists spent at number one."
+          decoding="async"
+        />
+        <figcaption>The artist chart compared the number of chart-topping singles with time spent at number one.</figcaption>
+      </figure>
+      <div class="case-body section-wrap">
+        <section class="case-prose">
+          <h2>When the playlist exposed the data problem</h2>
+          <p>
+            After a placement in BBC Visual Journalism, I wanted to make a visual story from
+            scratch. I scraped Official Charts records with Python and looked up each single on
+            Spotify to get measures such as danceability and energy for the recording.
+          </p>
+          <p>
+            When I turned the matches into a playlist, I found more than 50 karaoke versions
+            alongside other mismatches. I rewrote the matching script in Node.js to search by
+            title and artist separately, corrected chart metadata and checked for duplicate track
+            IDs and missing audio features. I kept unmatched singles in the chart history and
+            documented their absence from the sound comparisons.
+          </p>
+        </section>
+        <section class="case-prose">
+          <h2>From findings in R to charts readers could explore</h2>
+          <p>
+            I used R to compare songs across years and grouped the findings on cue cards to work
+            out the order of the story. I prototyped a swarm chart to compare artists and used a
+            timeline to show singles that returned to number one after dropping away.
+          </p>
+          <p>
+            I built the essay with D3 and Scrollama. The charts changed as readers scrolled,
+            bringing the points discussed in the text into focus. Track previews let readers hear
+            examples as they explored the story.
+          </p>
+        </section>
+        <section class="case-prose">
+          <h2>What I’d change today</h2>
+          <p>
+            I wrote unit and browser tests for the original. Testing the colours for different
+            types of colour vision deficiency also identified room for improvement. If I revisited
+            it, I’d validate the matches before beginning analysis, prototype on mobile earlier,
+            and add explicit chart controls and screen-reader descriptions.
+          </p>
+        </section>
+        <section class="case-prose">
+          <h2>Project and write-ups</h2>
+          <p><a class="button-link" href="https://rushlet.github.io/ci301_data-vis/website/project.html">Open the original visual essay <span aria-hidden="true">↗</span></a></p>
+          <ul>
+            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-2cf6ae2a1602">Project introduction</a></li>
+            <li><a href="https://medium.com/data-science/a-visual-analysis-of-uk-number-1s-getting-down-and-dirty-with-data-a663cee021c4">Data gathering and analysis</a></li>
+            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-digging-into-design-308e6be574fa">Design</a></li>
+            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-delving-into-development-1d532fbbea8f">Development</a></li>
+            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-the-trials-and-tribulations-of-testing-5041ab3deabb">Testing</a></li>
+            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-ones-the-next-steps-ebc577aa5d0">Next steps</a></li>
+          </ul>
+        </section>
+      </div>
+      <nav class="case-next section-wrap" aria-label="More case studies">
+        <span>MORE WORK</span>
+        <a href="case-study-pay-gap.html">Falling through the pay gap <b aria-hidden="true">↗</b></a>
+      </nav>
+    </main>
+    <footer class="site-footer section-wrap">
+      <a class="wordmark" href="index.html">RUSHLET</a
+      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
+      ><a href="index.html#contact">Get in touch ↗</a>
+    </footer>
+    <script src="hero-motion.js" defer></script>
+  </body>
+</html>
