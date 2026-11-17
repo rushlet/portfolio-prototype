@@ -32,6 +32,7 @@
   --pink-ink: #b32f65;
   --pink-soft: #ffd8e7;
   --yellow: #f4db65;
+  --yellow-soft: #fff2b0;
   --lavender: #eeeff8;
   --line: 2px solid var(--blue);
   --shadow: 4px 5px 0 rgba(65, 86, 219, 0.18);
@@ -238,6 +239,7 @@ footer a:hover {
 .contact-layout h2 {
   margin: 0;
   font: 850 clamp(2.5rem, 6vw, 5.6rem)/0.98 var(--display);
+  align-self: anchor-center;
 }
 .intro h2 em,
 .intro-copy {
@@ -556,14 +558,14 @@ footer a:hover {
   background: var(--blue-soft);
 }
 .tile-yellow {
-  background: #fff2b0;
+  background: var(--yellow-soft);
 }
-.tile-number {
+.tile-description {
   font-size: 0.68rem;
   font-weight: 850;
 }
 .tile-title {
-  margin: auto 0 0.6rem;
+  margin: 1rem 0 0.6rem;
   font: 850 clamp(1.4rem, 2.2vw, 2rem)/1 var(--display);
 }
 .tile-detail {
@@ -1337,9 +1339,6 @@ footer > span {
   color: var(--pink);
   font-size: 2rem;
 }
-.more-tile .tile-title {
-  margin: 0.5rem 0 0.6rem;
-}
 .resume-tile-visual {
   display: flex;
   flex-direction: column;
@@ -1598,7 +1597,7 @@ footer > span {
   margin-left: 6%;
 }
 .yellow-slot {
-  background: #fff2b0;
+  background: var(--yellow-soft);
   margin-left: 12%;
 }
 .festi-bottom {
@@ -1612,7 +1611,7 @@ footer > span {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  background: #fff2b0;
+  background: var(--yellow-soft);
 }
 .produce-art > span,
 .produce-art > b {
@@ -1978,7 +1977,7 @@ footer > span {
   border: 1.5px solid var(--ink);
   border-radius: 50%;
   background: var(--paper);
-  margin-bottom: 0.125rem;
+  margin-bottom: 0.25rem;
 }
 .motion-toggle[aria-pressed="true"] .motion-indicator {
   background: var(--pink);
@@ -2153,14 +2152,14 @@ footer > span {
 .code-illustration i:nth-of-type(3) {
   height: 2.8rem;
   width: 90%;
-  background: #fff2b0;
+  background: var(--yellow-soft);
   transform: rotate(-1deg);
 }
 .code-illustration i:nth-of-type(4) {
   height: 3.8rem;
   transform: rotate(2deg);
   width: 52%;
-  background: #fff2b0;
+  background: var(--yellow-soft);
 }
 .code-illustration small {
   padding: 0.25rem 0.4rem;
@@ -2725,58 +2724,17 @@ footer > span {
 }
 .more-work-card {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1.25rem;
-  isolation: isolate;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  margin-top: clamp(2rem, 4vw, 3rem);
   padding: clamp(2rem, 4vw, 3rem) 0 2rem;
   overflow: visible;
   background: transparent;
   border: 0;
-  border-top: 1px solid rgba(30, 49, 90, 0.25);
   border-radius: 0;
   box-shadow: none;
 }
-.more-work-card::after {
-  display: none;
-}
-.more-work-card > div {
-  position: relative;
-  z-index: 1;
-  max-width: 55ch;
-}
-.more-work-card h3 {
-  margin: 1.5rem 0 0;
-  font: 850 clamp(1.5rem, 2.7vw, 2.25rem)/1.1 var(--display);
-}
-.more-work-card > div > p:not(.eyebrow) {
-  max-width: 50ch;
-  margin: 0.65rem 0 0;
-  font-size: 1rem;
-}
-.more-work-card .button-link.button-blue {
-  border: var(--line);
-  border-radius: 999px;
-  box-shadow: none;
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-  margin-right: 0;
-  background: var(--white);
-  color: var(--ink);
-  padding-left: 1.6rem;
-  padding-right: 2.6rem;
-}
-.more-work-card .button-link.button-blue > span[aria-hidden="true"] {
-  right: 1.35rem;
-}
-.more-work-card .button-link.button-blue:hover {
-  box-shadow: none;
-  background: var(--blue-soft);
-}
+
 .motion-enabled .button-link,
 .motion-enabled .pill-link {
   box-shadow: 3px 4px 0 var(--blue);
@@ -2926,6 +2884,7 @@ footer > span {
 .access-band h2 {
   margin: 0;
   font: 850 clamp(1.8rem, 5vw, 3.8rem)/1.02 var(--display);
+  align-self: anchor-center;
 }
 .access-feature p {
   margin: 0 0 1.15rem;
@@ -3149,6 +3108,7 @@ html:not(.site-motion-on) *::after {
 }
 .site-header nav a,
 .site-header nav .motion-toggle {
+  padding-block: 0.4rem 0.2rem;
   min-height: 2.25rem;
 }
 .text-link,
