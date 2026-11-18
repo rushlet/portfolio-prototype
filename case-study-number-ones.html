@@ -16,41 +16,53 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
-        >RUSHLET</a
-      >
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home">RUSHLET</a>
       <nav aria-label="Main navigation">
-        <a href="work.html">Work</a><a href="resume.html">About</a
-        ><a href="index.html#contact">Contact</a
-        ><span class="nav-motion-group" hidden
-          ><span class="nav-separator" aria-hidden="true"></span
-          ><button
+        <a href="work.html">Work</a>
+        <a href="resume.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <span class="nav-motion-group" hidden>
+          <span class="nav-separator" aria-hidden="true"></span>
+          <button
             class="motion-toggle"
             type="button"
             data-hero-motion-toggle
             aria-label="Motion"
             aria-pressed="false"
           >
-            <span class="motion-indicator" aria-hidden="true"></span
-            ><span data-hero-motion-label>Motion off</span>
-          </button></span
-        >
+            <span class="motion-indicator" aria-hidden="true"></span>
+            <span data-hero-motion-label>Motion off</span>
+          </button>
+        </span>
       </nav>
     </header>
     <main id="main" tabindex="-1" class="case-page editorial-case">
       <section class="case-hero section-wrap">
         <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
         <p class="eyebrow">FINAL-YEAR PROJECT · DATA STORYTELLING</p>
-        <h1>A visual analysis of UK number 1s</h1>
+        <h1>
+          A visual analysis of
+          <em>UK number 1s</em>
+        </h1>
         <p class="case-deck">
-          Adele and Bob the Builder each had two UK number ones in my 1952–2018 dataset.
-          For my final-year project, I built an interactive essay about what reached the
-          top of the chart, how long it stayed there and how it sounded.
+          Did you know that Grammy award-winning singer, Adele, has the same number of Number 1
+          Singles as children’s cartoon character Bob the Builder?* I didn’t, until I undertook an
+          analysis of the UK chart history for my final year university project.
         </p>
+        <span class="case-deck footnote">*(At least until 2021!)</span>
         <div class="case-facts">
-          <div><b>My role</b><span>Research, analysis, design and development</span></div>
-          <div><b>Data</b><span>Official Charts and Spotify</span></div>
-          <div><b>Period</b><span>1952–2018</span></div>
+          <div>
+            <b>My role</b>
+            <span>Research, analysis, design and development</span>
+          </div>
+          <div>
+            <b>Data</b>
+            <span>Official Charts and Spotify</span>
+          </div>
+          <div>
+            <b>Period</b>
+            <span>1952–2018</span>
+          </div>
         </div>
       </section>
       <figure class="section-wrap case-figure">
@@ -61,68 +73,294 @@
           alt="Bubble chart comparing how many weeks artists spent at number one."
           decoding="async"
         />
-        <figcaption>The artist chart compared the number of chart-topping singles with time spent at number one.</figcaption>
+        <figcaption>
+          The artist chart compared the number of chart-topping singles with time spent at number
+          one.
+        </figcaption>
       </figure>
       <div class="case-body section-wrap">
         <section class="case-prose">
-          <h2>When the playlist exposed the data problem</h2>
+          <h2>Making my own interactive story</h2>
           <p>
-            After a placement in BBC Visual Journalism, I wanted to make a visual story from
-            scratch. I scraped Official Charts records with Python and looked up each single on
-            Spotify to get measures such as danceability and energy for the recording.
+            On placement with BBC Visual Journalism, I’d seen what went into making an interactive
+            story. For my final-year project, I wanted to try the whole thing myself, from finding
+            the data to deciding what story to tell with it.
           </p>
           <p>
-            When I turned the matches into a playlist, I found more than 50 karaoke versions
-            alongside other mismatches. I rewrote the matching script in Node.js to search by
-            title and artist separately, corrected chart metadata and checked for duplicate track
-            IDs and missing audio features. I kept unmatched singles in the chart history and
-            documented their absence from the sound comparisons.
+            Spotify produces quantitative data for every song in their library on characteristics
+            such as ‘danceability’, ‘valence’ and ‘energy’. This data is effectively meaningless in
+            isolation and presented as a list of numerical values. I decided to contextualise some
+            of this data by analysing songs which have reached number 1 in the UK charts, and
+            comparing attributes based on when they were number 1, or how long they were number 1
+            for. I scraped the Official Charts records with
+            <strong>Python and Beautiful Soup</strong>, then matched the singles against the
+            <strong>Spotify API</strong>.
           </p>
         </section>
         <section class="case-prose">
-          <h2>From findings in R to charts readers could explore</h2>
+          <h2>Getting the data right</h2>
           <p>
-            I used R to compare songs across years and grouped the findings on cue cards to work
-            out the order of the story. I prototyped a swarm chart to compare artists and used a
-            timeline to show singles that returned to number one after dropping away.
+            I’d already started looking for patterns when I turned the matches into a Spotify
+            playlist. That’s when I spotted more than 50 karaoke versions, plus covers and other
+            mismatches. A karaoke version could make a chart hit look far more instrumental than it
+            really was.
           </p>
           <p>
-            I built the essay with D3 and Scrollama. The charts changed as readers scrolled,
-            bringing the points discussed in the text into focus. Track previews let readers hear
-            examples as they explored the story.
+            I rewrote the matching script in
+            <strong>Node.js</strong>
+            to query Spotify’s title and artist fields separately. I corrected chart metadata and
+            checked for duplicate track IDs and missing audio features. I kept unmatched singles in
+            the chart history and left them out of the audio comparisons.
+          </p>
+        </section>
+        <section class="case-prose">
+          <h2>Showing readers where to look</h2>
+          <p>
+            The BBC data journalism team gave me a quick introduction to
+            <strong>R</strong>
+            over lunch. I really enjoyed diving into the data, pulling bits out and calculating if
+            they were statistically significant. Once I’d found enough material for the story, I
+            wrote the findings on cue cards so I could move them around and see what belonged
+            together.
+          </p>
+          <p>
+            I used Keynote to mock up what readers would see at each scroll step. In the first
+            chart, position highlighted artists' total weeks at number one and bubble size showed
+            how many singles got the artist there. The cluster at one week drew the eye first. With
+            no labels on the bubbles, it was hard to find the artists I was talking about.
+          </p>
+          <figure class="case-figure">
+            <img
+              src="assets/number-ones-swarm-prototype.webp"
+              width="1000"
+              height="563"
+              alt="Early artist chart with unlabelled bubbles and a dense cluster at one week."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              The first swarm chart mockup. The cluster at one week draws the eye away from the
+              artists further along the axis.
+            </figcaption>
+          </figure>
+          <p>
+            I wanted readers to see the full distribution and still be able to pick out the artists
+            I was discussing. My first version matched the colour of each artist’s name in the text
+            to their bubble. I wanted readers to make that connection at a glance, so I kept the
+            overview and added annotations that pointed to each artist by name. As readers scrolled,
+            <strong>Scrollama</strong> triggered the changes and <strong>D3</strong> updated the
+            chart. After the guided part, readers could pan and zoom for themselves.
+          </p>
+          <div class="number-ones-chart-pair">
+            <figure class="case-figure">
+              <img
+                src="assets/number-ones-colour.webp"
+                width="1000"
+                height="558"
+                alt="Two bubbles match the colours of the Beatles and Elvis in the text beside the chart."
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Colour highlights link the names in the text to the bubbles.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img
+                src="assets/number-ones-scroll-prototype.webp"
+                width="1000"
+                height="563"
+                alt="Scroll-step mockup with arrows naming the Beatles and Elvis on a zoomed-in swarm chart."
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                This mockup shows how direct labels identify the artists on the chart.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="case-prose">
+          <h2>How did the sound of a number one change?</h2>
+          <p>
+            I wanted to know which year had the most danceable number ones, according to Spotify. My
+            first line chart connected individual song scores, so several points could land in the
+            same year. It was a mess. Once I averaged the scores by year, 1983 came out on top in my
+            dataset. The line chart let readers see that peak in context alongside the trends for
+            valence, acousticness and energy.
+          </p>
+          <figure class="case-figure">
+            <img
+              src="assets/number-ones-finished-line.webp"
+              width="1000"
+              height="574"
+              alt="Four lines show the annual averages for danceability, valence, acousticness and energy. Acousticness falls over much of the period."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              The finished line chart shows the average scores of number ones in each year.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="case-prose">
+          <h2>Comparing songs by ear and by data</h2>
+          <p>
+            I used searchable dropdowns for readers to find songs among more than 1,300 UK number
+            ones. They could compare two chart hits or sign in to Spotify to compare a hit with one
+            of their most-played tracks. I quickly mocked up a chart to get a sense of what it would
+            look like to compare several audio features at once.
+          </p>
+          <figure class="case-figure">
+            <img
+              src="assets/number-ones-compare-prototype.webp"
+              width="1000"
+              height="563"
+              alt="Mockup comparing two songs across danceability, valence, acousticness and energy."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>The mockup shows several audio features together.</figcaption>
+          </figure>
+          <p>
+            The grouped bars were trickier to build than I expected. I tried a few approaches but,
+            as time was limited, I opted to simplify and used two bars in the finished version, with
+            a dropdown to switch between features. Readers could compare the scores for
+            acousticness, for example, then listen to the previews and see if the difference made
+            sense to them.
+          </p>
+          <figure class="case-figure">
+            <img
+              src="assets/number-ones-finished-bars.webp"
+              width="1000"
+              height="574"
+              alt="The finished comparison shows two orange bars for the acousticness scores of Guilty Party and C’est La Vie."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>The finished comparison shows one feature at a time.</figcaption>
+          </figure>
+        </section>
+        <section class="case-prose">
+          <h2>What testing turned up</h2>
+          <p>
+            I used <strong>Selenium and Cucumber</strong> to scroll through the story and check that
+            the charts zoomed to the right view and displayed the right labels. The tests helped me
+            spot that revisiting a step could create duplicate SVG elements with the same ID. I
+            changed the code to reuse the existing label if it stayed in place and replace it if it
+            moved, so scrolling back and forth didn’t keep adding elements to the page.
+          </p>
+          <p>
+            On a first visit in my WebPageTest run, the swarm chart’s artist images accounted for
+            most of the 800-plus requests, and the page took almost 20 seconds to finish loading.
+            The document itself loaded in under 1.5 seconds and the page was interactive in under
+            four, so readers could start exploring while the remaining assets loaded.
+          </p>
+          <p>
+            Colour vision simulations showed that the line chart was harder to read with all seven
+            series visible.
+          </p>
+        </section>
+        <section class="case-prose">
+          <h2>From final-year project to BBC News</h2>
+          <p>
+            I received 94% for the project and won the 2018 Wired Sussex prize for Best Final Year
+            Digital Project.
+          </p>
+          <p>
+            I took what I’d learned about building charts that respond to scrolling into
+            <a href="case-study-pay-gap.html">Falling through the pay gap</a>, where I led
+            development of a BBC story that animated more than 10,000 company data points.
           </p>
         </section>
         <section class="case-prose">
           <h2>What I’d change today</h2>
           <p>
-            I wrote unit and browser tests for the original. Testing the colours for different
-            types of colour vision deficiency also identified room for improvement. If I revisited
-            it, I’d validate the matches before beginning analysis, prototype on mobile earlier,
-            and add explicit chart controls and screen-reader descriptions.
+            I’d rethink how the text and charts fit together on a phone and change the chart layout
+            where shrinking it would make it harder to read. I’d also add visible,
+            keyboard-accessible controls for stepping through the story and exploring the charts,
+            plus descriptions for screen-reader users.
+          </p>
+          <p>
+            I’d load artist images as readers reached the swarm chart and add direct labels to help
+            tell the lines apart. There’s also more I’d like to explore in the dataset. I’d turn the
+            chart and storytelling code into reusable templates so I could build a series around
+            those questions.
           </p>
         </section>
         <section class="case-prose">
           <h2>Project and write-ups</h2>
-          <p><a class="button-link" href="https://rushlet.github.io/ci301_data-vis/website/project.html">Open the original visual essay <span aria-hidden="true">↗</span></a></p>
-          <ul>
-            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-2cf6ae2a1602">Project introduction</a></li>
-            <li><a href="https://medium.com/data-science/a-visual-analysis-of-uk-number-1s-getting-down-and-dirty-with-data-a663cee021c4">Data gathering and analysis</a></li>
-            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-digging-into-design-308e6be574fa">Design</a></li>
-            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-delving-into-development-1d532fbbea8f">Development</a></li>
-            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-the-trials-and-tribulations-of-testing-5041ab3deabb">Testing</a></li>
-            <li><a href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-ones-the-next-steps-ebc577aa5d0">Next steps</a></li>
-          </ul>
+          <div class="number-ones-project-links">
+            <a
+              class="button-link"
+              href="https://rushlet.github.io/ci301_data-vis/website/project.html"
+            >
+              Open the original visual essay
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div>
+              <p>
+                I wrote about this process in a lot more depth on Medium, doing a deep dive into
+                each part of the process:
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-2cf6ae2a1602"
+                  >
+                    Project introduction
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/data-science/a-visual-analysis-of-uk-number-1s-getting-down-and-dirty-with-data-a663cee021c4"
+                  >
+                    Data gathering and analysis
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-digging-into-design-308e6be574fa"
+                  >
+                    Design
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-delving-into-development-1d532fbbea8f"
+                  >
+                    Development
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-1s-the-trials-and-tribulations-of-testing-5041ab3deabb"
+                  >
+                    Testing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://medium.com/@rushlet/a-visual-analysis-of-uk-number-ones-the-next-steps-ebc577aa5d0"
+                  >
+                    Next steps
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More case studies">
-        <span>MORE WORK</span>
-        <a href="case-study-warmer.html">Next: How much warmer is your city? <b aria-hidden="true">↗</b></a>
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="case-study-warmer.html">
+          Next: How much warmer is your city?
+          <b aria-hidden="true">↗</b>
+        </a>
       </nav>
     </main>
     <footer class="site-footer section-wrap">
-      <a class="wordmark" href="index.html">RUSHLET</a
-      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
-      ><a href="index.html#contact">Get in touch ↗</a>
+      <a class="wordmark" href="index.html">RUSHLET</a>
+
+      <a href="index.html#contact">Get in touch ↗</a>
     </footer>
     <script src="hero-motion.js" defer></script>
   </body>

@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f7f6f0" />
     <meta
       name="description"
-      content="I built the D3 polling chart and a publishing workflow that let BBC News journalists update the tracker from Slack, including outside developer cover."
+      content="I built the BBC News Poll Tracker’s chart and scoreboard and automated updates for its interactive and no-JavaScript versions."
     />
     <title>2019 Poll Tracker — Becky Rush</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
@@ -16,9 +16,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
-        >RUSHLET</a
-      >
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home">RUSHLET</a>
       <nav aria-label="Main navigation">
         <a href="work.html">Work</a><a href="resume.html">About</a
         ><a href="index.html#contact">Contact</a
@@ -42,47 +40,160 @@
         <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
         <p class="eyebrow">BBC NEWS · ELECTIONS</p>
         <h1>2019 Poll Tracker</h1>
-        <p class="case-deck">I built the D3 polling chart and a publishing workflow that let BBC News journalists update the tracker from Slack, including outside developer cover.</p>
+        <p class="case-deck">
+          I built the chart and scoreboard for the BBC News Poll Tracker, worked on a version that
+          ran without JavaScript, and automated updates so both versions stayed current.
+        </p>
+        <div class="case-facts">
+          <div>
+            <b>My role</b>
+            <span>Front-end development and deployment automation</span>
+          </div>
+          <div>
+            <b>Built with</b>
+            <span>D3, Handlebars, AWS Lambda, Jenkins, Puppeteer and Slack</span>
+          </div>
+          <div>
+            <b>Outcome</b>
+            <span>The department adopted the publishing workflow</span>
+          </div>
+        </div>
       </section>
-      <figure class="section-wrap case-figure">
-        <img
-          src="assets/polltracker.webp"
-          width="1110"
-          height="598"
-          alt="BBC News poll tracker showing polling data for the 2019 UK general election."
-          decoding="async"
-        />
-        <figcaption>The public tracker brought together a polling chart, a pictogram and a table.</figcaption>
+      <figure class="section-wrap case-figure poll-tracker-screenshot">
+        <picture>
+          <source
+            media="(min-width: 681px)"
+            srcset="assets/polltracker-large.png"
+            width="641"
+            height="562"
+          />
+          <img
+            src="assets/polltracker-bbc.png"
+            width="400"
+            height="400"
+            alt="BBC News chart showing each party’s polling trend and individual poll results."
+            decoding="async"
+          />
+        </picture>
+        <figcaption>
+          The chart tracks change in party support via opinion polls during the 2019 election
+          campaign.
+        </figcaption>
       </figure>
       <div class="case-body section-wrap">
         <section class="case-prose">
-          <h2>Keeping the tracker up to date</h2>
-          <p>New polls could come in outside the hours developers were available. I built the data pipeline so journalists could publish updates to the D3 chart, pictogram and table together. The pipeline also used Puppeteer to generate fallback images.</p>
+          <h2>Building the chart and scoreboard</h2>
+          <p>
+            I built the scoreboard with HTML, CSS and Handlebars templates so readers could see each
+            party’s latest support estimate and its margin of error at a glance. In the D3 chart
+            below it, dots showed individual poll results and lines showed how support for each
+            party was changing over time.
+          </p>
+          <p>
+            The tracker also included the full dataset off-screen so screen reader users could
+            explore the individual poll results in detail.
+          </p>
+          <p>
+            I also worked on what we called the 'core content' version. This is what is available
+            when JavaScript is disabled. We believed that everybody should be able to access the
+            information provided, no matter their device. It used HTML, CSS and images to render a
+            near-identical experience.
+          </p>
         </section>
         <section class="case-prose">
-          <h2>Publishing from Slack</h2>
-          <p>Journalists could start a deployment from their project’s Slack channel. An AWS Lambda function checked that the person was authorised to deploy that project, then triggered a Jenkins pipeline to build, test and publish the update.</p>
-          <p>The workflow posted progress and failures back to Slack so journalists could see whether the update had gone through.</p>
+          <h2>Developers didn't want to work Sundays</h2>
+          <p>
+            New polls often came out on Sundays, when a developer might not be around to publish an
+            update. I set up an AWS Lambda function to check the polling feed every minute. It used
+            checksums to compare the latest data with the previous version and triggered a Jenkins
+            build only when the data changed.
+          </p>
+          <p>
+            Jenkins fetched the latest data, applied the Kalman filter to estimate the polling trend
+            we'd written with the journalists and prepared separate datasets for the D3 chart,
+            pictogram and table. Puppeteer captured the chart at several sizes to use as image
+            fallbacks for the core content version and Apple News. The build published everything
+            together so readers saw the same figures across the tracker.
+          </p>
+          <figure class="poll-pipeline">
+            <figcaption>How a new poll reached readers</figcaption>
+            <ol role="list">
+              <li>
+                <strong>AWS Lambda</strong>
+                <span>
+                  Check the polling feed every minute. Start a build when the checksum changes.
+                </span>
+              </li>
+              <li>
+                <strong>Jenkins build</strong>
+                <span>Fetch the latest polls, calculate the trend and prepare the datasets.</span>
+              </li>
+              <li>
+                <strong>Published updates</strong>
+                <span>Chart, pictogram and table</span>
+                <span>Web and Apple News fallbacks captured with Puppeteer</span>
+              </li>
+            </ol>
+          </figure>
+        </section>
+        <section class="case-prose">
+          <h2>Putting the power in the journalists' hands</h2>
+          <p>
+            The Lambda function and Jenkins build worked well, but the editorial team wanted a way
+            to manually trigger a build if they needed to. And we'd prefer not to be running polling
+            every minute. We all used Slack, so I decided to build an intergration to allow
+            journalists to trigger a build and deploy from the project’s channel.
+          </p>
+          <p>
+            A journalist could start a build with a slash command in the project’s Slack channel. An
+            AWS Lambda function checked their publishing permissions before triggering Jenkins. The
+            deployer reported progress and errors back in the channel. I wrote a guide to pin there
+            so journalists could look up what an error meant and when to contact a developer.
+          </p>
+          <p>
+            This also meant we could allow journalists to see how their content looked in context.
+            The devs could configure what branch the deployer would deploy so editorial could try
+            out changes and show progress to stakeholders while developers carried on working on
+            another branch.
+          </p>
+          <p>
+            One journalist said he loved being able to publish an update from his phone on the
+            school run.
+          </p>
         </section>
         <section class="case-prose">
           <h2>Reusing the workflow across the newsroom</h2>
-          <p>The department later adopted the deployment workflow. Standard pipeline templates gave teams a starting point for new projects, with room to add project-specific steps such as formatting data or generating fallback content.</p>
+          <p>
+            I added reusable Jenkins and Makefile templates to the team’s project set up kit so devs
+            could use the Slack deployer in any project where it would be handy. Developers could
+            set it up for a new project in as little as 15 minutes and add their own custom build
+            steps (such as data manipulation) when they needed to.
+          </p>
+          <p>
+            During the pandemic, BBC News built tools that let readers check infection and
+            vaccination rates in their area. The figures changed daily, and keeping the lookups
+            current had previously depended on having a developer available to deploy each update.
+            With the Slack deployer, journalists could publish the new figures as soon as they came
+            out, including on evenings and weekends.
+          </p>
         </section>
-        <div class="case-links">
-          <a class="button-link" href="https://www.bbc.co.uk/news/uk-politics-49798197">
-            Read the original BBC tracker <span aria-hidden="true">↗</span>
-          </a>
-          <a class="text-link" href="work.html#case-studies">See all case studies</a>
-        </div>
+        <section class="case-prose">
+          <div class="case-links">
+            <a class="button-link" href="https://www.bbc.co.uk/news/uk-politics-49798197">
+              See the 2019 Poll Tracker <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More case studies">
-        <span>MORE WORK</span>
-        <a href="case-study-number-ones.html">Next: A visual analysis of UK number 1s <b aria-hidden="true">↗</b></a>
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="case-study-number-ones.html"
+          >Next: A visual analysis of UK number 1s <b aria-hidden="true">↗</b></a
+        >
       </nav>
     </main>
     <footer class="site-footer section-wrap">
       <a class="wordmark" href="index.html">RUSHLET</a
-      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
       ><a href="index.html#contact">Get in touch ↗</a>
     </footer>
     <script src="hero-motion.js" defer></script>

@@ -16,36 +16,38 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Becky Rush, home"
-        >RUSHLET</a
-      >
+      <a class="wordmark" href="index.html" aria-label="Becky Rush, home">RUSHLET</a>
       <nav aria-label="Main navigation">
-        <a href="work.html">Work</a><a href="resume.html">About</a
-        ><a href="index.html#contact">Contact</a
-        ><span class="nav-motion-group" hidden
-          ><span class="nav-separator" aria-hidden="true"></span
-          ><button
+        <a href="work.html">Work</a>
+        <a href="resume.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <span class="nav-motion-group" hidden>
+          <span class="nav-separator" aria-hidden="true"></span>
+          <button
             class="motion-toggle"
             type="button"
             data-hero-motion-toggle
             aria-label="Motion"
             aria-pressed="false"
           >
-            <span class="motion-indicator" aria-hidden="true"></span
-            ><span data-hero-motion-label>Motion off</span>
-          </button></span
-        >
+            <span class="motion-indicator" aria-hidden="true"></span>
+            <span data-hero-motion-label>Motion off</span>
+          </button>
+        </span>
       </nav>
     </header>
     <main id="main" tabindex="-1" class="case-page editorial-case">
       <section class="case-hero section-wrap">
         <a class="back-link" href="work.html#case-studies">← Back to selected work</a>
         <p class="eyebrow">BBC NEWS · DATA STORYTELLING</p>
-        <h1>Falling through the pay gap</h1>
+        <h1>
+          Falling through the
+          <em>pay gap</em>
+        </h1>
         <p class="case-deck">
-          How do you show the UK’s gender pay gap one company at a time? I led development of a
-          BBC News story that rearranged more than 10,000 dots as readers scrolled, revealing
-          which companies paid men or women more on average and how large the gaps were.
+          How do you show the UK’s gender pay gap one company at a time? I led development of a BBC
+          News story that rearranged more than 10,000 dots as readers scrolled, revealing which
+          companies paid men or women more on average and how large the gaps were.
         </p>
       </section>
       <figure class="section-wrap case-figure">
@@ -56,24 +58,26 @@
           alt="Companies sorted by the size of their pay gaps. Women were paid more at 1,424 companies and men at 8,124."
           decoding="async"
         />
-        <figcaption>Each dot represented one company in the BBC’s analysis of the UK gender pay gap.</figcaption>
+        <figcaption>
+          Each dot represented one company in the BBC’s analysis of the UK gender pay gap.
+        </figcaption>
       </figure>
       <div class="case-body section-wrap">
         <section class="case-prose">
           <h2>Getting 10,000 dots to move</h2>
           <p>
             Each dot represented a company. Keeping those dots as the chart changed let readers
-            follow the same dataset from a count of companies to a comparison of pay gaps.
-            My first D3 and Canvas prototype slowed down as the dots moved and eventually crashed
-            Chrome. A designer on the team suggested WebGL. I adapted an example built with regl
-            and connected it to the scroll sequence. With the GPU drawing the dots, I could run
-            the transitions and prove we could build the story around them.
+            follow the same dataset from a count of companies to a comparison of pay gaps. My first
+            D3 and Canvas prototype slowed down as the dots moved and eventually crashed Chrome. A
+            designer on the team suggested WebGL. I adapted an example built with regl and connected
+            it to the scroll sequence. With the GPU drawing the dots, I could run the transitions
+            and prove we could build the story around them.
           </p>
           <p>
             The first circular layout I tried arranged the dots in a spiral. The pattern became
-            distracting once the dots moved, so we worked out how to arrange them into a more
-            even circle. For the histogram, I used D3 to calculate the dot positions and regl to
-            draw them. I added an SVG layer for the axes, labels and highlighted points.
+            distracting once the dots moved, so we worked out how to arrange them into a more even
+            circle. For the histogram, I used D3 to calculate the dot positions and regl to draw
+            them. I added an SVG layer for the axes, labels and highlighted points.
           </p>
           <figure class="case-figure">
             <img
@@ -84,16 +88,18 @@
               loading="lazy"
               decoding="async"
             />
-            <figcaption>The spiral prototype on the left and the finished circle on the right.</figcaption>
+            <figcaption>
+              The spiral prototype on the left and the finished circle on the right.
+            </figcaption>
           </figure>
         </section>
         <section class="case-prose">
           <h2>Keeping the charts available without JavaScript</h2>
           <p>
-            The text referred to patterns in the charts, so readers still needed those visuals
-            if the script failed to load or JavaScript was disabled. I included static views at
-            key points in the story, including the breakdown of which companies paid men or
-            women more on average.
+            The text referred to patterns in the charts, so readers still needed those visuals if
+            the script failed to load or JavaScript was disabled. I included static views at key
+            points in the story, including the breakdown of which companies paid men or women more
+            on average.
           </p>
           <figure class="case-figure" style="max-width: 430px">
             <img
@@ -104,16 +110,18 @@
               loading="lazy"
               decoding="async"
             />
-            <figcaption>One of the static charts readers saw when JavaScript was unavailable.</figcaption>
+            <figcaption>
+              One of the static charts readers saw when JavaScript was unavailable.
+            </figcaption>
           </figure>
         </section>
         <section class="case-prose">
           <h2>Making the story work without animation</h2>
           <p>
-            Eileen Webb’s writing on motion sensitivity made me think about where the control
-            needed to be. I added a notice and a switch at the start of the article so readers
-            could turn off animation before they encountered any movement. I also made sure
-            they could tab through the content and use the arrow keys to scroll.
+            Eileen Webb’s writing on motion sensitivity made me think about where the control needed
+            to be. I added a notice and a switch at the start of the article so readers could turn
+            off animation before they encountered any movement. I also made sure they could tab
+            through the content and use the arrow keys to scroll.
           </p>
           <figure class="case-figure">
             <img
@@ -135,24 +143,41 @@
         </section>
         <section class="case-prose">
           <h2>Taking the approach into the next story</h2>
-          <p>For <a href="case-study-warmer.html">How much warmer is your city?</a>, I adapted the scrolling library for the BBC’s project tooling. The team extended the motion toggle to control the globe, chart transitions and illustrations, and used the reader’s reduced-motion preference to set its initial state.</p>
+          <p>
+            For
+            <a href="case-study-warmer.html">How much warmer is your city?</a>
+            , I adapted the scrolling library for the BBC’s project tooling. The team extended the
+            motion toggle to control the globe, chart transitions and illustrations, and used the
+            reader’s reduced-motion preference to set its initial state.
+          </p>
         </section>
-        <div class="case-links">
-          <a class="button-link" href="https://www.bbc.co.uk/news/resources/idt-a524dd3a-c09c-4f09-bc03-c5006d75ef96">
-            Read the original BBC story <span aria-hidden="true">↗</span>
-          </a>
-          <a class="text-link" href="https://www.youtube.com/watch?v=n7bLC5NX_nM">Watch my talk on accessible storytelling ↗</a>
-        </div>
+        <section class="case-prose">
+          <div class="case-links">
+            <a
+              class="button-link"
+              href="https://www.bbc.co.uk/news/resources/idt-a524dd3a-c09c-4f09-bc03-c5006d75ef96"
+            >
+              Read the original BBC story
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="https://www.youtube.com/watch?v=n7bLC5NX_nM">
+              Watch my talk on accessible storytelling ↗
+            </a>
+          </div>
+        </section>
       </div>
       <nav class="case-next section-wrap" aria-label="More case studies">
-        <span>MORE WORK</span>
-        <a href="case-study-poll-tracker.html">Next: 2019 Poll Tracker <b aria-hidden="true">↗</b></a>
+        <a href="work.html#case-studies">All case studies</a>
+        <a href="case-study-poll-tracker.html">
+          Next: 2019 Poll Tracker
+          <b aria-hidden="true">↗</b>
+        </a>
       </nav>
     </main>
     <footer class="site-footer section-wrap">
-      <a class="wordmark" href="index.html">RUSHLET</a
-      ><span>MADE WITH CURIOSITY IN BRIGHTON</span
-      ><a href="index.html#contact">Get in touch ↗</a>
+      <a class="wordmark" href="index.html">RUSHLET</a>
+
+      <a href="index.html#contact">Get in touch ↗</a>
     </footer>
     <script src="hero-motion.js" defer></script>
   </body>

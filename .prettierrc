@@ -7,7 +7,7 @@
     {
       "files": "*.html",
       "options": {
-        "htmlWhitespaceSensitivity": "ignore"
+        "htmlWhitespaceSensitivity": "css"
       }
     }
   ]
